@@ -1,5 +1,14 @@
 eclipse.preferences.version=1
+encoding//src/Grupp7/FieldOfProfession.java=UTF-8
+encoding//src/Grupp7/Location.java=UTF-8
+encoding//src/Grupp7/Purpose.java=UTF-8
 encoding//src/Grupp7/Uppgift1_Service.java=UTF-8
 encoding//src/Grupp7/Uppgift1_ServiceLocator.java=UTF-8
 encoding//src/Grupp7/Uppgift1_ServiceSoap.java=UTF-8
 encoding//src/Grupp7/Uppgift1_ServiceSoapStub.java=UTF-8
+encoding//src/Grupp7/Uppgift2_Service.java=UTF-8
+encoding//src/Grupp7/Uppgift2_ServiceLocator.java=UTF-8
+encoding//src/Grupp7/Uppgift2_ServiceSoap.java=UTF-8
+encoding//src/Grupp7/Uppgift2_ServiceSoapStub.java=UTF-8
+encoding//src/Grupp7/User.java=UTF-8
+encoding//src/Grupp7/UserLocationPurpose.java=UTF-8
