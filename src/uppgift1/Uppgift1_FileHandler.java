@@ -8,7 +8,7 @@ public class Uppgift1_FileHandler {
 	
 	static Uppgift1_ServiceSoapProxy proxy = new Uppgift1_ServiceSoapProxy();
 	//
-	public static String getFileContent(String s) throws RemoteException{
+	public static String getFileContent(String s) throws RemoteException {
 		String fileContent;
 		fileContent = proxy.openFile(s);
 		return fileContent;

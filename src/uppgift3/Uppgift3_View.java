@@ -36,10 +36,11 @@ public class Uppgift3_View {
 	private JLabel lbl_feedback;
 	private JPanel contentPane;
 	private DefaultTableModel emptyDefTableModel = new DefaultTableModel();
-	private JTable table_caccess;
-	private JTextField textField_EmployeeNo;
-	private JTextField textField_FirstName;
-	private JTextField textField_LastName;
+	private JTable table_Caccess;
+	private JTable table_cronusAccess;
+	private JTextField textField_employeeNo;
+	private JTextField textField_firstName;
+	private JTextField textField_lastName;
 
 	/**
 	 * Launch the application.
@@ -68,7 +69,6 @@ public class Uppgift3_View {
 				}
 			}
 			} catch (Exception e) {
-				//Hantera fel här
 				e.printStackTrace();
 			}
 		initialize();
@@ -98,42 +98,42 @@ public class Uppgift3_View {
 		// ***********CRONUS ACCESS TAB***********
 		// ***************************************
 
-		table_caccess = new JTable();
-		JPanel panel_caccess = new JPanel();
-		tabbedPane.addTab("Cronus Access", panel_caccess);
-		panel_caccess.setLayout(null);
+		table_Caccess = new JTable();
+		JPanel panel_cronusAccess = new JPanel();
+		tabbedPane.addTab("Cronus Access", panel_cronusAccess);
+		panel_cronusAccess.setLayout(null);
 
-		JScrollPane scrollPane_caccess = new JScrollPane();
-		scrollPane_caccess.setBounds(460, 32, 782, 483);
-		panel_caccess.add(scrollPane_caccess);
+		JScrollPane scrollPane_cronusAccess = new JScrollPane();
+		scrollPane_cronusAccess.setBounds(460, 32, 782, 483);
+		panel_cronusAccess.add(scrollPane_cronusAccess);
 
-		table_caccess = new JTable();
-		scrollPane_caccess.setViewportView(table_caccess);
+		table_cronusAccess = new JTable();
+		scrollPane_cronusAccess.setViewportView(table_cronusAccess);
 
-		JPanel panel_CronusAccess_showTables = new JPanel();
-		panel_CronusAccess_showTables.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"),
+		JPanel panel_cronusAccess_showTables = new JPanel();
+		panel_cronusAccess_showTables.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"),
 				"Show Employee and Related Tables", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_CronusAccess_showTables.setBounds(10, 11, 392, 128);
-		panel_caccess.add(panel_CronusAccess_showTables);
-		panel_CronusAccess_showTables.setLayout(null);
+		panel_cronusAccess_showTables.setBounds(10, 11, 392, 128);
+		panel_cronusAccess.add(panel_cronusAccess_showTables);
+		panel_cronusAccess_showTables.setLayout(null);
 
-		JLabel lbl_caccess_selectOption = new JLabel("Select table");
-		lbl_caccess_selectOption.setBounds(23, 45, 87, 23);
-		panel_CronusAccess_showTables.add(lbl_caccess_selectOption);
+		JLabel lbl_cronusAccess_selectOption = new JLabel("Select table");
+		lbl_cronusAccess_selectOption.setBounds(23, 45, 87, 23);
+		panel_cronusAccess_showTables.add(lbl_cronusAccess_selectOption);
 
-		JComboBox<String> comboBox_caccessTables = new JComboBox<String>();
-		comboBox_caccessTables.setBounds(120, 44, 242, 25);
-		comboBox_caccessTables.addItem("Employee");
-		comboBox_caccessTables.addItem("Relatives");
-		comboBox_caccessTables.addItem("Sickleave 2004");
-		comboBox_caccessTables.addItem("Most sick");
-		panel_CronusAccess_showTables.add(comboBox_caccessTables);
-		comboBox_caccessTables.setName("comboBox_caccessTables");
+		JComboBox<String> comboBox_cronusAccessTables = new JComboBox<String>();
+		comboBox_cronusAccessTables.setBounds(120, 44, 242, 25);
+		comboBox_cronusAccessTables.addItem("Employee");
+		comboBox_cronusAccessTables.addItem("Relatives");
+		comboBox_cronusAccessTables.addItem("Sickleave 2004");
+		comboBox_cronusAccessTables.addItem("Most sick");
+		panel_cronusAccess_showTables.add(comboBox_cronusAccessTables);
+		comboBox_cronusAccessTables.setName("comboBox_caccessTables");
 
-		JButton btn_caccess__showTables = new JButton("Show");
-		btn_caccess__showTables.addActionListener(new ActionListener() {
+		JButton btn_cronusAccess__showTables = new JButton("Show");
+		btn_cronusAccess__showTables.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				switch(comboBox_caccessTables.getSelectedIndex()){
+				switch(comboBox_cronusAccessTables.getSelectedIndex()){
 				case 0:
 					//Employee
 					break;
@@ -152,32 +152,32 @@ public class Uppgift3_View {
 				}
 			}
 		});
-		btn_caccess__showTables.setBounds(254, 85, 108, 23);
-		panel_CronusAccess_showTables.add(btn_caccess__showTables);
+		btn_cronusAccess__showTables.setBounds(254, 85, 108, 23);
+		panel_cronusAccess_showTables.add(btn_cronusAccess__showTables);
 
-		JPanel panel_CronusAccess_showMetadata = new JPanel();
-		panel_CronusAccess_showMetadata.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"),
+		JPanel panel_cronusAccess_showMetadata = new JPanel();
+		panel_cronusAccess_showMetadata.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"),
 				"Show Meta data", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_CronusAccess_showMetadata.setBounds(10, 173, 392, 133);
-		panel_caccess.add(panel_CronusAccess_showMetadata);
-		panel_CronusAccess_showMetadata.setLayout(null);
+		panel_cronusAccess_showMetadata.setBounds(10, 173, 392, 133);
+		panel_cronusAccess.add(panel_cronusAccess_showMetadata);
+		panel_cronusAccess_showMetadata.setLayout(null);
 
-		JComboBox<String> comboBox_caccessMeta = new JComboBox<String>();
-		comboBox_caccessMeta.addItem("Keys");
-		comboBox_caccessMeta.addItem("Indexes");
-		comboBox_caccessMeta.addItem("Table constraints");
-		comboBox_caccessMeta.addItem("All tables 1");
-		comboBox_caccessMeta.addItem("All tables 2");
-		comboBox_caccessMeta.addItem("Columns employee 1");
-		comboBox_caccessMeta.addItem("Columns employee 2");
-		comboBox_caccessMeta.setBounds(124, 46, 242, 25);
-		panel_CronusAccess_showMetadata.add(comboBox_caccessMeta);
-		comboBox_caccessMeta.setName("comboBox_caccessMeta");
+		JComboBox<String> comboBox_cronusAccessMeta = new JComboBox<String>();
+		comboBox_cronusAccessMeta.addItem("Keys");
+		comboBox_cronusAccessMeta.addItem("Indexes");
+		comboBox_cronusAccessMeta.addItem("Table constraints");
+		comboBox_cronusAccessMeta.addItem("All tables 1");
+		comboBox_cronusAccessMeta.addItem("All tables 2");
+		comboBox_cronusAccessMeta.addItem("Columns employee 1");
+		comboBox_cronusAccessMeta.addItem("Columns employee 2");
+		comboBox_cronusAccessMeta.setBounds(124, 46, 242, 25);
+		panel_cronusAccess_showMetadata.add(comboBox_cronusAccessMeta);
+		comboBox_cronusAccessMeta.setName("comboBox_caccessMeta");
 
-		JButton btn_caccess_showMetadata = new JButton("Show");
-		btn_caccess_showMetadata.addActionListener(new ActionListener() {
+		JButton btn_cronusAccess_showMetadata = new JButton("Show");
+		btn_cronusAccess_showMetadata.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				switch(comboBox_caccessMeta.getSelectedIndex()){
+				switch(comboBox_cronusAccessMeta.getSelectedIndex()){
 				case 0:
 					//Keys
 					break;
@@ -203,82 +203,82 @@ public class Uppgift3_View {
 				}
 			}
 		});
-		btn_caccess_showMetadata.setBounds(258, 87, 108, 23);
-		panel_CronusAccess_showMetadata.add(btn_caccess_showMetadata);
+		btn_cronusAccess_showMetadata.setBounds(258, 87, 108, 23);
+		panel_cronusAccess_showMetadata.add(btn_cronusAccess_showMetadata);
 
-		JLabel lblNewLabel = new JLabel("Select query");
-		lblNewLabel.setBounds(23, 49, 96, 19);
-		panel_CronusAccess_showMetadata.add(lblNewLabel);
+		JLabel lbl_cronusAccessQuery = new JLabel("Select query");
+		lbl_cronusAccessQuery.setBounds(23, 49, 96, 19);
+		panel_cronusAccess_showMetadata.add(lbl_cronusAccessQuery);
 
 		JSeparator separator_cronusAccess = new JSeparator();
 		separator_cronusAccess.setBounds(10, 155, 392, 2);
-		panel_caccess.add(separator_cronusAccess);
+		panel_cronusAccess.add(separator_cronusAccess);
 		
-		JPanel panel_AddUpdateDelete = new JPanel();
-		panel_AddUpdateDelete.setLayout(null);
-		panel_AddUpdateDelete.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"),
+		JPanel panel_addUpdateDelete = new JPanel();
+		panel_addUpdateDelete.setLayout(null);
+		panel_addUpdateDelete.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"),
 					"Add/Update/Delete", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_AddUpdateDelete.setBounds(10, 330, 392, 185);
-		panel_caccess.add(panel_AddUpdateDelete);
+		panel_addUpdateDelete.setBounds(10, 330, 392, 185);
+		panel_cronusAccess.add(panel_addUpdateDelete);
 		
-		JLabel lblEmployee = new JLabel("Employee no:");
-		lblEmployee.setBounds(15, 28, 104, 23);
-		panel_AddUpdateDelete.add(lblEmployee);
+		JLabel lbl_employee = new JLabel("Employee no:");
+		lbl_employee.setBounds(15, 28, 104, 23);
+		panel_addUpdateDelete.add(lbl_employee);
 		
-		JButton btnAddEmploy = new JButton("Add Employee");
-		btnAddEmploy.addActionListener(new ActionListener() {
+		JButton btn_addEmploy = new JButton("Add Employee");
+		btn_addEmploy.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnAddEmploy.setBounds(10, 135, 117, 29);
-		panel_AddUpdateDelete.add(btnAddEmploy);
+		btn_addEmploy.setBounds(10, 135, 117, 29);
+		panel_addUpdateDelete.add(btn_addEmploy);
 		
-		textField_EmployeeNo = new JTextField();
-		textField_EmployeeNo.setBounds(123, 26, 192, 26);
-		panel_AddUpdateDelete.add(textField_EmployeeNo);
-		textField_EmployeeNo.setColumns(10);
+		textField_employeeNo = new JTextField();
+		textField_employeeNo.setBounds(123, 26, 192, 26);
+		panel_addUpdateDelete.add(textField_employeeNo);
+		textField_employeeNo.setColumns(10);
 		
-		JLabel lblFirstName = new JLabel("First name:");
-		lblFirstName.setBounds(15, 67, 104, 20);
-		panel_AddUpdateDelete.add(lblFirstName);
+		JLabel lbl_firstName = new JLabel("First name:");
+		lbl_firstName.setBounds(15, 67, 104, 20);
+		panel_addUpdateDelete.add(lbl_firstName);
 		
-		JLabel lblLastName = new JLabel("Last name:");
-		lblLastName.setBounds(15, 104, 104, 20);
-		panel_AddUpdateDelete.add(lblLastName);
+		JLabel lbl_lastName = new JLabel("Last name:");
+		lbl_lastName.setBounds(15, 104, 104, 20);
+		panel_addUpdateDelete.add(lbl_lastName);
 		
-		textField_FirstName = new JTextField();
-		textField_FirstName.setBounds(123, 64, 192, 26);
-		panel_AddUpdateDelete.add(textField_FirstName);
-		textField_FirstName.setColumns(10);
+		textField_firstName = new JTextField();
+		textField_firstName.setBounds(123, 64, 192, 26);
+		panel_addUpdateDelete.add(textField_firstName);
+		textField_firstName.setColumns(10);
 		
-		textField_LastName = new JTextField();
-		textField_LastName.setBounds(123, 101, 192, 26);
-		panel_AddUpdateDelete.add(textField_LastName);
-		textField_LastName.setColumns(10);
+		textField_lastName = new JTextField();
+		textField_lastName.setBounds(123, 101, 192, 26);
+		panel_addUpdateDelete.add(textField_lastName);
+		textField_lastName.setColumns(10);
 		
-		JButton btnUpdateEmployee = new JButton("Update Employee");
-		btnUpdateEmployee.addActionListener(new ActionListener() {
+		JButton btn_updateEmployee = new JButton("Update Employee");
+		btn_updateEmployee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnUpdateEmployee.setBounds(137, 135, 117, 29);
-		panel_AddUpdateDelete.add(btnUpdateEmployee);
+		btn_updateEmployee.setBounds(137, 135, 117, 29);
+		panel_addUpdateDelete.add(btn_updateEmployee);
 		
-		JButton btnDeleteEmployee = new JButton("Delete Employee");
-		btnDeleteEmployee.addActionListener(new ActionListener() {
+		JButton btn_deleteEmployee = new JButton("Delete Employee");
+		btn_deleteEmployee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnDeleteEmployee.setBounds(265, 135, 117, 29);
-		panel_AddUpdateDelete.add(btnDeleteEmployee);
+		btn_deleteEmployee.setBounds(265, 135, 117, 29);
+		panel_addUpdateDelete.add(btn_deleteEmployee);
 		
-		JLabel label = new JLabel(" *");
-		label.setBounds(318, 29, 28, 20);
-		panel_AddUpdateDelete.add(label);
+		JLabel lbl_mustNumber = new JLabel(" *");
+		lbl_mustNumber.setBounds(318, 29, 28, 20);
+		panel_addUpdateDelete.add(lbl_mustNumber);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(10, 317, 392, 2);
-		panel_caccess.add(separator);
+		panel_cronusAccess.add(separator);
 	}
 
 	private void communicateMessage(String message) {
