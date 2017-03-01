@@ -103,7 +103,7 @@ public class Uppgift2_View {
 		panel.add(scrollPaneResultTable);
 		
 		JLabel lblFeedback = new JLabel("Feedback");
-		lblFeedback.setBounds(10, 632, 46, 14);
+		lblFeedback.setBounds(10, 632, 326, 14);
 		frame_1.getContentPane().add(lblFeedback);
 		
 		btnShowTable = new JButton("Show Table");
@@ -112,38 +112,7 @@ public class Uppgift2_View {
 				switch(comboBoxChooseTable.getSelectedIndex()){
 				case 0:
 					try {
-						User[] users = Uppgift2_Controller.getAllUsers();
-						
-						Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
-
-						Vector<String> columnNames = new Vector<String>();
-						
-						columnNames.add("Username");
-						columnNames.add("First name");
-						columnNames.add("Last name");
-						columnNames.add("Birth date");
-						columnNames.add("Profession");
-						columnNames.add("Password");
-						columnNames.add("About");
-						columnNames.add("Industry");
-						
-						for (User user : users) {
-							Vector<Object> showUsers = new Vector<Object>();
-							showUsers.add(user.getUserName());
-							showUsers.add(user.getFirstName());
-							showUsers.add(user.getLastName());
-							showUsers.add(user.getBirthDate().getTime());
-							showUsers.add(user.getProfession());
-							showUsers.add(user.getPassword());
-							showUsers.add(user.getAbout());
-							showUsers.add(user.getIndustry());
-							
-							columnData.add(showUsers);
-							//TypeDesc td = user.getTypeDesc();
-						}
-						
-						DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
-						tableResultTable.setModel(model);
+						tableResultTable.setModel(Uppgift2_Controller.getUsersTable());
 						
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
@@ -151,42 +120,44 @@ public class Uppgift2_View {
 					break;
 				case 1:
 					try {
-						Uppgift2_Controller.getAllLocations();
+						tableResultTable.setModel(Uppgift2_Controller.getLocationsTable());
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 2:
 					try {
-						Uppgift2_Controller.getAllPurposes();
+						tableResultTable.setModel(Uppgift2_Controller.getPurposesTable());
+
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 3:
 					try {
-						Uppgift2_Controller.getAllUserLocationPurposes();
+						tableResultTable.setModel(Uppgift2_Controller.getUserLocationPurposesTable());
+
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 4:
 					try {
-						Uppgift2_Controller.getAllFieldOfProfessions();
+						tableResultTable.setModel(Uppgift2_Controller.getFieldOfProfessionsTable());
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 5:
 					try {
-						Uppgift2_Controller.getAllMatches();
+						tableResultTable.setModel(Uppgift2_Controller.getMatchesTable());
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 6:
 					try {
-						Uppgift2_Controller.getAllMessages();
+						tableResultTable.setModel(Uppgift2_Controller.getMessagesTable());
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
 					}
