@@ -1,7 +1,6 @@
 package uppgift2;
 
 import java.rmi.RemoteException;
-
 import Grupp7.FieldOfProfession;
 import Grupp7.Location;
 import Grupp7.Match;

@@ -1,7 +1,6 @@
 package uppgift3.controller;
 
 import java.rmi.RemoteException;
-
 import Grupp7.uppgift3_ws.*;
 import uppgift3.dataAccessLayer.*;
 

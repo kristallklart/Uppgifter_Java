@@ -1,7 +1,6 @@
 package uppgift3.dataAccessLayer;
+
 import java.rmi.RemoteException;
-
-
 import Grupp7.uppgift3_ws.*;
 
 public class Dal {
