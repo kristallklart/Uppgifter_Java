@@ -333,13 +333,13 @@ public class UserLocationPurpose  implements java.io.Serializable {
         elemField.setFieldName("fromDate");
         elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "FromDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setNillable(true);
+        elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("toDate");
         elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "ToDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setNillable(true);
+        elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }
 

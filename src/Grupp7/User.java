@@ -28,6 +28,12 @@ public class User  implements java.io.Serializable {
 
     private Grupp7.FieldOfProfession fieldOfProfession;
 
+    private Grupp7.UserLocationPurpose[] userLocationPurposes;
+
+    private Grupp7.Match[] matches;
+
+    private Grupp7.Message[] messages;
+
     public User() {
     }
 
@@ -41,7 +47,10 @@ public class User  implements java.io.Serializable {
            java.lang.String password,
            java.lang.String about,
            java.lang.String industry,
-           Grupp7.FieldOfProfession fieldOfProfession) {
+           Grupp7.FieldOfProfession fieldOfProfession,
+           Grupp7.UserLocationPurpose[] userLocationPurposes,
+           Grupp7.Match[] matches,
+           Grupp7.Message[] messages) {
            this.userName = userName;
            this.firstName = firstName;
            this.lastName = lastName;
@@ -52,6 +61,9 @@ public class User  implements java.io.Serializable {
            this.about = about;
            this.industry = industry;
            this.fieldOfProfession = fieldOfProfession;
+           this.userLocationPurposes = userLocationPurposes;
+           this.matches = matches;
+           this.messages = messages;
     }
 
 
@@ -254,6 +266,66 @@ public class User  implements java.io.Serializable {
         this.fieldOfProfession = fieldOfProfession;
     }
 
+
+    /**
+     * Gets the userLocationPurposes value for this User.
+     * 
+     * @return userLocationPurposes
+     */
+    public Grupp7.UserLocationPurpose[] getUserLocationPurposes() {
+        return userLocationPurposes;
+    }
+
+
+    /**
+     * Sets the userLocationPurposes value for this User.
+     * 
+     * @param userLocationPurposes
+     */
+    public void setUserLocationPurposes(Grupp7.UserLocationPurpose[] userLocationPurposes) {
+        this.userLocationPurposes = userLocationPurposes;
+    }
+
+
+    /**
+     * Gets the matches value for this User.
+     * 
+     * @return matches
+     */
+    public Grupp7.Match[] getMatches() {
+        return matches;
+    }
+
+
+    /**
+     * Sets the matches value for this User.
+     * 
+     * @param matches
+     */
+    public void setMatches(Grupp7.Match[] matches) {
+        this.matches = matches;
+    }
+
+
+    /**
+     * Gets the messages value for this User.
+     * 
+     * @return messages
+     */
+    public Grupp7.Message[] getMessages() {
+        return messages;
+    }
+
+
+    /**
+     * Sets the messages value for this User.
+     * 
+     * @param messages
+     */
+    public void setMessages(Grupp7.Message[] messages) {
+        this.messages = messages;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof User)) return false;
@@ -295,7 +367,16 @@ public class User  implements java.io.Serializable {
               this.industry.equals(other.getIndustry()))) &&
             ((this.fieldOfProfession==null && other.getFieldOfProfession()==null) || 
              (this.fieldOfProfession!=null &&
-              this.fieldOfProfession.equals(other.getFieldOfProfession())));
+              this.fieldOfProfession.equals(other.getFieldOfProfession()))) &&
+            ((this.userLocationPurposes==null && other.getUserLocationPurposes()==null) || 
+             (this.userLocationPurposes!=null &&
+              java.util.Arrays.equals(this.userLocationPurposes, other.getUserLocationPurposes()))) &&
+            ((this.matches==null && other.getMatches()==null) || 
+             (this.matches!=null &&
+              java.util.Arrays.equals(this.matches, other.getMatches()))) &&
+            ((this.messages==null && other.getMessages()==null) || 
+             (this.messages!=null &&
+              java.util.Arrays.equals(this.messages, other.getMessages())));
         __equalsCalc = null;
         return _equals;
     }
@@ -344,6 +425,39 @@ public class User  implements java.io.Serializable {
         }
         if (getFieldOfProfession() != null) {
             _hashCode += getFieldOfProfession().hashCode();
+        }
+        if (getUserLocationPurposes() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getUserLocationPurposes());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getUserLocationPurposes(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        if (getMatches() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getMatches());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getMatches(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        if (getMessages() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getMessages());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getMessages(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -423,6 +537,30 @@ public class User  implements java.io.Serializable {
         elemField.setXmlType(new javax.xml.namespace.QName("Grupp7", "FieldOfProfession"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("userLocationPurposes");
+        elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "UserLocationPurposes"));
+        elemField.setXmlType(new javax.xml.namespace.QName("Grupp7", "UserLocationPurpose"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        elemField.setItemQName(new javax.xml.namespace.QName("Grupp7", "UserLocationPurpose"));
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("matches");
+        elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "Matches"));
+        elemField.setXmlType(new javax.xml.namespace.QName("Grupp7", "Match"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        elemField.setItemQName(new javax.xml.namespace.QName("Grupp7", "Match"));
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("messages");
+        elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "Messages"));
+        elemField.setXmlType(new javax.xml.namespace.QName("Grupp7", "Message"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        elemField.setItemQName(new javax.xml.namespace.QName("Grupp7", "Message"));
         typeDesc.addFieldDesc(elemField);
     }
 
