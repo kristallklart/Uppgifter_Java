@@ -74,5 +74,17 @@ public class Uppgift2_ServiceSoapProxy implements Grupp7.Uppgift2_ServiceSoap {
     return uppgift2_ServiceSoap.getAllFieldOfProfessions();
   }
   
+  public Grupp7.Message[] getAllMessages() throws java.rmi.RemoteException{
+    if (uppgift2_ServiceSoap == null)
+      _initUppgift2_ServiceSoapProxy();
+    return uppgift2_ServiceSoap.getAllMessages();
+  }
+  
+  public Grupp7.Match[] getAllMatches() throws java.rmi.RemoteException{
+    if (uppgift2_ServiceSoap == null)
+      _initUppgift2_ServiceSoapProxy();
+    return uppgift2_ServiceSoap.getAllMatches();
+  }
+  
   
 }

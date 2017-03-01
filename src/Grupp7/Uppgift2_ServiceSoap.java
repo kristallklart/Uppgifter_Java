@@ -13,4 +13,6 @@ public interface Uppgift2_ServiceSoap extends java.rmi.Remote {
     public Grupp7.Location[] getAllLocations() throws java.rmi.RemoteException;
     public Grupp7.UserLocationPurpose[] getAllUserLocationPurposes() throws java.rmi.RemoteException;
     public Grupp7.FieldOfProfession[] getAllFieldOfProfessions() throws java.rmi.RemoteException;
+    public Grupp7.Message[] getAllMessages() throws java.rmi.RemoteException;
+    public Grupp7.Match[] getAllMatches() throws java.rmi.RemoteException;
 }
