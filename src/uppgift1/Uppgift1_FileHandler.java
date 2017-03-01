@@ -7,7 +7,7 @@ import Grupp7.Uppgift1_ServiceSoapProxy;
 public class Uppgift1_FileHandler {
 	
 	static Uppgift1_ServiceSoapProxy proxy = new Uppgift1_ServiceSoapProxy();
-	
+	//
 	public static String getFileContent(String s) throws RemoteException{
 		String fileContent;
 		fileContent = proxy.openFile(s);
