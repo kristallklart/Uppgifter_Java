@@ -1,4 +1,4 @@
-package src.uppgift2;
+package uppgift2;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;

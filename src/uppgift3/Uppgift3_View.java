@@ -1,4 +1,4 @@
-package src.uppgift3;
+package uppgift3;
 
 import java.awt.EventQueue;
 
@@ -33,7 +33,7 @@ import javax.swing.table.DefaultTableModel;
 public class Uppgift3_View {
 
 	private JFrame frame;
-	private JLabel lbl_feedback;	
+	private JLabel lbl_feedback;
 	private JPanel contentPane;
 	private DefaultTableModel emptyDefTableModel = new DefaultTableModel();
 	private JTable table_caccess;
