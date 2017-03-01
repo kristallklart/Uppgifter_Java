@@ -33,6 +33,7 @@ public class Uppgift2_View {
 	private DefaultTableModel dataModelResultTable;
 	private JScrollPane scrollPaneResultTable;
 	private JTable tableResultTable;
+	private final String errorMessage = "Error: Could not load the table.";
 
 	/**
 	 * Launch the application.
@@ -127,78 +128,67 @@ public class Uppgift2_View {
 						columnNames.add("Industry");
 						
 						for (User user : users) {
-							Vector<Object> aUser = new Vector<Object>();
-							aUser.add(user.getUserName());
-							aUser.add(user.getFirstName());
-							aUser.add(user.getLastName());
-							aUser.add(user.getBirthDate().getTime());
-							aUser.add(user.getProfession());
-							aUser.add(user.getPassword());
-							aUser.add(user.getAbout());
-							aUser.add(user.getIndustry());
+							Vector<Object> showUsers = new Vector<Object>();
+							showUsers.add(user.getUserName());
+							showUsers.add(user.getFirstName());
+							showUsers.add(user.getLastName());
+							showUsers.add(user.getBirthDate().getTime());
+							showUsers.add(user.getProfession());
+							showUsers.add(user.getPassword());
+							showUsers.add(user.getAbout());
+							showUsers.add(user.getIndustry());
 							
-							columnData.add(aUser);
+							columnData.add(showUsers);
 							//TypeDesc td = user.getTypeDesc();
-							//td.
-							//columnNames.add(user.getUserName());
 						}
-						
-						lblFeedback.setText(Integer.toString(users.length));
 						
 						DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
 						tableResultTable.setModel(model);
 						
 					} catch (RemoteException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 1:
 					try {
 						Uppgift2_Controller.getAllLocations();
 					} catch (RemoteException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 2:
 					try {
 						Uppgift2_Controller.getAllPurposes();
 					} catch (RemoteException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 3:
 					try {
 						Uppgift2_Controller.getAllUserLocationPurposes();
 					} catch (RemoteException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 4:
 					try {
 						Uppgift2_Controller.getAllFieldOfProfessions();
 					} catch (RemoteException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 5:
 					try {
 						Uppgift2_Controller.getAllMatches();
 					} catch (RemoteException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+						lblFeedback.setText(errorMessage);
 					}
 					break;
 				case 6:
 					try {
 						Uppgift2_Controller.getAllMessages();
 					} catch (RemoteException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+						lblFeedback.setText(errorMessage);
 					}
 					break;
 				}
