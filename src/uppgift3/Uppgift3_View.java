@@ -61,6 +61,16 @@ public class Uppgift3_View {
 	 * Create the application.
 	 */
 	public Uppgift3_View() {
+		try{
+			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+				if ("Windows".equals(info.getName())) {
+					UIManager.setLookAndFeel(info.getClassName());
+				}
+			}
+			} catch (Exception e) {
+				//Hantera fel här
+				e.printStackTrace();
+			}
 		initialize();
 	}
 
@@ -70,18 +80,18 @@ public class Uppgift3_View {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(100, 100, 1280, 720);
+		frame.setBounds(100, 100, 1280, 626);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		frame.setContentPane(contentPane);
 		contentPane.setLayout(null);
 
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setBounds(0, 0, 1262, 636);
+		tabbedPane.setBounds(0, 0, 1262, 561);
 		contentPane.add(tabbedPane);
 
 		lbl_feedback = new JLabel();
-		lbl_feedback.setBounds(19, 635, 941, 20);
+		lbl_feedback.setBounds(10, 560, 1244, 20);
 		contentPane.add(lbl_feedback);
 
 		// ***************************************
@@ -94,7 +104,7 @@ public class Uppgift3_View {
 		panel_caccess.setLayout(null);
 
 		JScrollPane scrollPane_caccess = new JScrollPane();
-		scrollPane_caccess.setBounds(460, 32, 782, 554);
+		scrollPane_caccess.setBounds(460, 32, 782, 483);
 		panel_caccess.add(scrollPane_caccess);
 
 		table_caccess = new JTable();
@@ -208,7 +218,7 @@ public class Uppgift3_View {
 		panel_AddUpdateDelete.setLayout(null);
 		panel_AddUpdateDelete.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"),
 					"Add/Update/Delete", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_AddUpdateDelete.setBounds(10, 335, 392, 251);
+		panel_AddUpdateDelete.setBounds(10, 330, 392, 185);
 		panel_caccess.add(panel_AddUpdateDelete);
 		
 		JLabel lblEmployee = new JLabel("Employee no:");
@@ -220,7 +230,7 @@ public class Uppgift3_View {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnAddEmploy.setBounds(15, 166, 160, 29);
+		btnAddEmploy.setBounds(10, 135, 117, 29);
 		panel_AddUpdateDelete.add(btnAddEmploy);
 		
 		textField_EmployeeNo = new JTextField();
@@ -251,7 +261,7 @@ public class Uppgift3_View {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnUpdateEmployee.setBounds(217, 166, 160, 29);
+		btnUpdateEmployee.setBounds(137, 135, 117, 29);
 		panel_AddUpdateDelete.add(btnUpdateEmployee);
 		
 		JButton btnDeleteEmployee = new JButton("Delete Employee");
@@ -259,7 +269,7 @@ public class Uppgift3_View {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnDeleteEmployee.setBounds(123, 211, 160, 29);
+		btnDeleteEmployee.setBounds(265, 135, 117, 29);
 		panel_AddUpdateDelete.add(btnDeleteEmployee);
 		
 		JLabel label = new JLabel(" *");
