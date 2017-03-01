@@ -1,4 +1,4 @@
-package uppgift3;
+package uppgift3.View;
 
 import java.awt.EventQueue;
 
