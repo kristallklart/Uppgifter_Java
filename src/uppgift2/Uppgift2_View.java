@@ -4,35 +4,25 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.RemoteException;
-import java.util.Vector;
-
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-
-import org.apache.axis.description.TypeDesc;
-
-import Grupp7.User;
-
-import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.JLabel;
 
 public class Uppgift2_View {
 
-	private JFrame frame;
-	private JFrame frame_1;
+	private JFrame frameMain;
 	private JComboBox<String> comboBoxChooseTable;
 	private JButton btnShowTable;
-	private JPanel panel;
-	private DefaultTableModel dataModelResultTable;
+	private JPanel panelMain;
 	private JScrollPane scrollPaneResultTable;
 	private JTable tableResultTable;
+	private JLabel lblFeedback;
 	private final String errorMessage = "Error: Could not load the table.";
 
 	/**
@@ -43,7 +33,7 @@ public class Uppgift2_View {
 			public void run() {
 				try {
 					Uppgift2_View window = new Uppgift2_View();
-					window.frame_1.setVisible(true);
+					window.frameMain.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -72,18 +62,15 @@ public class Uppgift2_View {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame_1 = new JFrame();
-		frame_1.setBounds(100, 100, 985, 684);
-		frame_1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame_1.getContentPane().setLayout(null);
+		frameMain = new JFrame();
+		frameMain.setBounds(100, 100, 985, 684);
+		frameMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameMain.getContentPane().setLayout(null);
 		
-		panel = new JPanel();
-		panel.setBounds(0, 0, 963, 628);
-		frame_1.getContentPane().add(panel);
-		panel.setLayout(null);
+		panelMain = new JPanel();
+		panelMain.setBounds(0, 0, 963, 621);
+		frameMain.getContentPane().add(panelMain);
+		panelMain.setLayout(null);
 		
 		comboBoxChooseTable = new JComboBox<String>();
 		comboBoxChooseTable.addItem("User");
@@ -94,17 +81,16 @@ public class Uppgift2_View {
 		comboBoxChooseTable.addItem("Match");
 		comboBoxChooseTable.addItem("Message");
 		comboBoxChooseTable.setBounds(15, 16, 199, 26);
-		panel.add(comboBoxChooseTable);
+		panelMain.add(comboBoxChooseTable);
 		
-		dataModelResultTable = new DefaultTableModel();
-		tableResultTable = new JTable(dataModelResultTable);
+		tableResultTable = new JTable();
 		scrollPaneResultTable = new JScrollPane(tableResultTable);
 		scrollPaneResultTable.setBounds(15, 60, 933, 552);
-		panel.add(scrollPaneResultTable);
+		panelMain.add(scrollPaneResultTable);
 		
-		JLabel lblFeedback = new JLabel("Feedback");
-		lblFeedback.setBounds(10, 632, 326, 14);
-		frame_1.getContentPane().add(lblFeedback);
+		lblFeedback = new JLabel();
+		lblFeedback.setBounds(15, 625, 556, 15);
+		frameMain.getContentPane().add(lblFeedback);
 		
 		btnShowTable = new JButton("Show Table");
 		btnShowTable.addActionListener(new ActionListener() {
@@ -166,7 +152,7 @@ public class Uppgift2_View {
 			}
 		});
 		btnShowTable.setBounds(229, 15, 115, 29);
-		panel.add(btnShowTable);	
+		panelMain.add(btnShowTable);	
 		}
 	}
 
