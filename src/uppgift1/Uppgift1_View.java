@@ -24,7 +24,6 @@ public class Uppgift1_View {
 	private JFrame frameOpenFile;
 	private JFileChooser fileChooser;
 	private FileNameExtensionFilter filter; 
-	//Uppgift1_ServiceSoapProxy proxy = new Uppgift1_ServiceSoapProxy();
 
 	/**
 	 * Launch the application.
@@ -53,7 +52,6 @@ public class Uppgift1_View {
 			}
 		}
 		} catch (Exception e) {
-			//Hantera fel här
 			e.printStackTrace();
 		}
 		fileChooser = new JFileChooser();
@@ -105,11 +103,10 @@ public class Uppgift1_View {
 		panelResult.setBounds(10, 40, 234, 180);
 		frameOpenFile.getContentPane().add(panelResult);
 		
-		// Exempel för att öppna filer: http://docs.oracle.com/javase/tutorial/uiswing/components/filechooser.html
 		JButton btnBrowseFile = new JButton("Browse file...");
 		btnBrowseFile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				int returnVal = fileChooser.showOpenDialog(frameOpenFile); //alternativt null som parameter
+				int returnVal = fileChooser.showOpenDialog(frameOpenFile);
 		        if (returnVal == JFileChooser.APPROVE_OPTION) {
 		        	File file = fileChooser.getSelectedFile();
 		            String fileName;
