@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.rmi.RemoteException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -35,12 +36,11 @@ public class Uppgift3_View {
 	private JFrame frame;
 	private JLabel lbl_feedback;
 	private JPanel contentPane;
-	private DefaultTableModel emptyDefTableModel = new DefaultTableModel();
-	private JTable table_Caccess;
 	private JTable table_cronusAccess;
 	private JTextField textField_employeeNo;
 	private JTextField textField_firstName;
 	private JTextField textField_lastName;
+	private ArrayList<JTextField> textFields = new ArrayList<JTextField>();
 
 	/**
 	 * Launch the application.
@@ -98,7 +98,7 @@ public class Uppgift3_View {
 		// ***********CRONUS ACCESS TAB***********
 		// ***************************************
 
-		table_Caccess = new JTable();
+		//table_Caccess = new JTable();
 		JPanel panel_cronusAccess = new JPanel();
 		tabbedPane.addTab("Cronus Access", panel_cronusAccess);
 		panel_cronusAccess.setLayout(null);
@@ -133,21 +133,46 @@ public class Uppgift3_View {
 		JButton btn_cronusAccess__showTables = new JButton("Show");
 		btn_cronusAccess__showTables.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				clearFeedback();
 				switch(comboBox_cronusAccessTables.getSelectedIndex()){
 				case 0:
 					//Employee
+					try {
+						DefaultTableModel model = Controller.getEmployees();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException e) {
+						lbl_feedback.setText("Error could not load table.");
+					}
 					break;
 					
 				case 1:
 					//Relatives
+					try {
+						DefaultTableModel model = Controller.getEmployeeRelatives();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException e) {
+						lbl_feedback.setText("Error could not load table.");
+					}					
 					break;
 					
 				case 2:
 					// Sickleave 2004
+					try {
+						DefaultTableModel model = Controller.getSickleave();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException e) {
+						lbl_feedback.setText("Error could not load table.");
+					}
 					break;
 				
 				case 3:
 					//Most sick
+					try {
+						DefaultTableModel model = Controller.getMostSick();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException e) {
+						lbl_feedback.setText("Error could not load table");
+					}
 					break;
 				}
 			}
@@ -177,27 +202,70 @@ public class Uppgift3_View {
 		JButton btn_cronusAccess_showMetadata = new JButton("Show");
 		btn_cronusAccess_showMetadata.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				clearFeedback();
 				switch(comboBox_cronusAccessMeta.getSelectedIndex()){
 				case 0:
 					//Keys
+					try {
+						DefaultTableModel model = Controller.getKeys();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not load table");
+					}
 					break;
 				case 1:
 					//Indexes
+					try {
+						DefaultTableModel model = Controller.getIndices();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not load table");
+					}
 					break;
 				case 2:
 					//Table constraints
+					try {
+						DefaultTableModel model = Controller.getConstraints();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not load table");
+					}
 					break;
 				case 3:
 					//All tables 1
+					try {
+						DefaultTableModel model = Controller.getTablesOne();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not load table");
+					}
 					break;
 				case 4:
 					//All tables 2
+					try {
+						DefaultTableModel model = Controller.getTablesTwo();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not load table");
+					}
 					break;
 				case 5:
 					//Columns employee 1
+					try {
+						DefaultTableModel model = Controller.getColumnsOne();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not load table");
+					}
 					break;
 				case 6:
 					//Columns employee 2
+					try {
+						DefaultTableModel model = Controller.getColumnsTwo();
+						table_cronusAccess.setModel(model);
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not load table");
+					}
 					break;
 				
 				}
@@ -228,6 +296,23 @@ public class Uppgift3_View {
 		JButton btn_addEmploy = new JButton("Add Employee");
 		btn_addEmploy.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				clearFeedback();
+				if (validateInput()) {
+					try {
+						String number = textField_employeeNo.getText().trim();
+						String firstName = textField_firstName.getText().trim();
+						String lastName = textField_lastName.getText().trim();
+						int result = Controller.addEmployee(number, firstName, lastName);
+						
+						if (result > 0) {
+							lbl_feedback.setText("Successfully added employee with number: " + number + ".");
+						} else {
+							lbl_feedback.setText("Could not add employee with number: " + number + ". Please make sure the number is correct.");
+						}
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not add employee to database.");
+					}
+				}
 			}
 		});
 		btn_addEmploy.setBounds(10, 135, 117, 29);
@@ -237,6 +322,7 @@ public class Uppgift3_View {
 		textField_employeeNo.setBounds(123, 26, 192, 26);
 		panel_addUpdateDelete.add(textField_employeeNo);
 		textField_employeeNo.setColumns(10);
+		textFields.add(textField_employeeNo);
 		
 		JLabel lbl_firstName = new JLabel("First name:");
 		lbl_firstName.setBounds(15, 67, 104, 20);
@@ -250,15 +336,34 @@ public class Uppgift3_View {
 		textField_firstName.setBounds(123, 64, 192, 26);
 		panel_addUpdateDelete.add(textField_firstName);
 		textField_firstName.setColumns(10);
+		textFields.add(textField_firstName);
 		
 		textField_lastName = new JTextField();
 		textField_lastName.setBounds(123, 101, 192, 26);
 		panel_addUpdateDelete.add(textField_lastName);
 		textField_lastName.setColumns(10);
+		textFields.add(textField_lastName);
 		
 		JButton btn_updateEmployee = new JButton("Update Employee");
 		btn_updateEmployee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				clearFeedback();
+				if (validateInput()) {
+					try {
+						String number = textField_employeeNo.getText().trim();
+						String firstName = textField_firstName.getText().trim();
+						String lastName = textField_lastName.getText().trim();
+						int result = Controller.updateEmployee(number, firstName, lastName);
+						
+						if (result > 0) {
+							lbl_feedback.setText("Successfully updated employee with number: " + number + ".");
+						} else {
+							lbl_feedback.setText("Could not update employee with number: " + number + ". Please make sure the number is correct.");
+						}
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not update employee in the database.");
+					}
+				}
 			}
 		});
 		btn_updateEmployee.setBounds(137, 135, 117, 29);
@@ -267,6 +372,21 @@ public class Uppgift3_View {
 		JButton btn_deleteEmployee = new JButton("Delete Employee");
 		btn_deleteEmployee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				clearFeedback();
+				if (textField_employeeNo.getText().trim() != "") {
+					try {
+						String number = textField_employeeNo.getText().trim();
+						int result = Controller.deleteEmployee(number);
+						
+						if (result > 0) {
+							lbl_feedback.setText("Successfully deleted employee with number: " + number + ".");
+						} else {
+							lbl_feedback.setText("Could not delete employee with number: " + number + ". Please make sure the number is correct.");
+						}
+					} catch (RemoteException ex) {
+						lbl_feedback.setText("Error could not update employee in the database.");
+					}
+				}
 			}
 		});
 		btn_deleteEmployee.setBounds(265, 135, 117, 29);
@@ -280,18 +400,25 @@ public class Uppgift3_View {
 		separator.setBounds(10, 317, 392, 2);
 		panel_cronusAccess.add(separator);
 	}
-
-	private void communicateMessage(String message) {
-		lbl_feedback.setText(message);
+	
+	private void clearTextFields() {
+		for (JTextField field : textFields) {
+			field.setText("");
+		}
+	}
+	
+	private boolean validateInput() {
+		if (textField_lastName.getText().trim() != "" ||
+			textField_firstName.getText().trim() != "" ||
+			textField_employeeNo.getText().trim() != "") {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	private void clearFeedback() {
 		lbl_feedback.setText("");
 	}
-
-	private void clearTable(JTable table) {
-		table.setModel(emptyDefTableModel);
-	}
-	
 
 }

@@ -8,7 +8,12 @@
 package Grupp7.uppgift3_ws;
 
 public class Employee  implements java.io.Serializable {
-    private java.lang.String employeeNumber;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private java.lang.String employeeNumber;
 
     private java.lang.String firstName;
 

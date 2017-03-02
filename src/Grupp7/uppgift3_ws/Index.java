@@ -8,7 +8,12 @@
 package Grupp7.uppgift3_ws;
 
 public class Index  implements java.io.Serializable {
-    private java.lang.String objectId;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private java.lang.String objectId;
 
     private java.lang.String name;
 

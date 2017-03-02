@@ -1,4 +1,4 @@
-package uppgift3.dataAccessLayer;
+package uppgift3;
 
 import java.rmi.RemoteException;
 import Grupp7.uppgift3_ws.*;
@@ -62,5 +62,4 @@ public class Dal {
     public static int deleteEmployee(String employeeNumber) throws RemoteException {
         return proxy.deleteEmployee(employeeNumber);
     }
-
 }
