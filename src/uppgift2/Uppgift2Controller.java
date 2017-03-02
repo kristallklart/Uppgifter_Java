@@ -10,17 +10,17 @@ import Grupp7.Purpose;
 import Grupp7.User;
 import Grupp7.UserLocationPurpose;
 
-public class Uppgift2_Controller {
+public class Uppgift2Controller {
 	
 	public static DefaultTableModel getUsersTable() throws RemoteException{
-		return Utils.getUsersTable();
+		return Uppgift2Utils.getUsersTable();
 	}
 	/*public static User[] getAllUsers() throws RemoteException {
 		return Uppgift2_Dal.getAllUsers();
 	}*/
 	
 	public static DefaultTableModel getLocationsTable() throws RemoteException{
-		return Utils.getLocationsTable();
+		return Uppgift2Utils.getLocationsTable();
 	}
 	
 	/*public static Location[] getAllLocations() throws RemoteException {
@@ -28,7 +28,7 @@ public class Uppgift2_Controller {
 	}*/
 	
 	public static DefaultTableModel getPurposesTable() throws RemoteException{
-		return Utils.getPurposesTable();
+		return Uppgift2Utils.getPurposesTable();
 	}
 	
 	/*public static UserLocationPurpose[] getAllUserLocationPurposes() throws RemoteException {
@@ -36,7 +36,7 @@ public class Uppgift2_Controller {
 	}*/
 	
 	public static DefaultTableModel getUserLocationPurposesTable() throws RemoteException{
-		return Utils.getUserLocationPurposesTable();
+		return Uppgift2Utils.getUserLocationPurposesTable();
 	}
 
 	/*public static Purpose[] getAllPurposes() throws RemoteException {
@@ -44,7 +44,7 @@ public class Uppgift2_Controller {
 	}*/
 	
 	public static DefaultTableModel getFieldOfProfessionsTable() throws RemoteException{
-		return Utils.getFieldOfProfessionsTable();
+		return Uppgift2Utils.getFieldOfProfessionsTable();
 	}
 	
 	/*public static FieldOfProfession[] getAllFieldOfProfessions() throws RemoteException {
@@ -52,11 +52,11 @@ public class Uppgift2_Controller {
 	}*/
 	
 	public static DefaultTableModel getMatchesTable() throws RemoteException{
-		return Utils.getMatchesTable();
+		return Uppgift2Utils.getMatchesTable();
 	}
 	
 	public static DefaultTableModel getMessagesTable() throws RemoteException{
-		return Utils.getMessagesTable();
+		return Uppgift2Utils.getMessagesTable();
 	}
 	
 	/*public static Message[] getAllMessages() throws RemoteException {

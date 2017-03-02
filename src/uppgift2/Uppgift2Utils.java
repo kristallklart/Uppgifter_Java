@@ -14,13 +14,13 @@ import Grupp7.Purpose;
 import Grupp7.User;
 import Grupp7.UserLocationPurpose;
 
-public class Utils {
+public class Uppgift2Utils {
 	
 	//static Uppgift2_ServiceSoapProxy proxy = new Uppgift2_ServiceSoapProxy();
 	
 	public static DefaultTableModel getUsersTable() throws RemoteException{
 		
-		User[] users = Uppgift2_Dal.getAllUsers();
+		User[] users = Uppgift2Dal.getAllUsers();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -55,7 +55,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getLocationsTable() throws RemoteException{
-		Location[] locations = Uppgift2_Dal.getAllLocations();
+		Location[] locations = Uppgift2Dal.getAllLocations();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -74,7 +74,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getPurposesTable() throws RemoteException{
-		Purpose[] purposes = Uppgift2_Dal.getAllPurposes();
+		Purpose[] purposes = Uppgift2Dal.getAllPurposes();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -93,7 +93,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getUserLocationPurposesTable() throws RemoteException{
-		UserLocationPurpose[] userLocationPurposes = Uppgift2_Dal.getAllUserLocationPurposes();
+		UserLocationPurpose[] userLocationPurposes = Uppgift2Dal.getAllUserLocationPurposes();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -120,7 +120,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getFieldOfProfessionsTable() throws RemoteException{
-		FieldOfProfession[] fieldOfProfessions = Uppgift2_Dal.getAllFieldOfProfessions();
+		FieldOfProfession[] fieldOfProfessions = Uppgift2Dal.getAllFieldOfProfessions();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -141,7 +141,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getMatchesTable() throws RemoteException{
-		Match[] matches = Uppgift2_Dal.getAllMatches();
+		Match[] matches = Uppgift2Dal.getAllMatches();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -162,7 +162,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getMessagesTable() throws RemoteException{
-		Message[] messages = Uppgift2_Dal.getAllMessages();
+		Message[] messages = Uppgift2Dal.getAllMessages();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 

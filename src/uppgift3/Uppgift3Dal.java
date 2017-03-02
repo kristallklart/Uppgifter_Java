@@ -3,7 +3,7 @@ package uppgift3;
 import java.rmi.RemoteException;
 import Grupp7.uppgift3_ws.*;
 
-public class Dal {
+public class Uppgift3Dal {
 	
 	static Uppgift3_ServiceSoapProxy proxy = new Uppgift3_ServiceSoapProxy();
 	
