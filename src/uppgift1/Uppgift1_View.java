@@ -103,7 +103,6 @@ public class Uppgift1_View {
 		panelResult.setBounds(10, 40, 234, 180);
 		frameOpenFile.getContentPane().add(panelResult);
 		
-		// Exempel för att öppna filer: http://docs.oracle.com/javase/tutorial/uiswing/components/filechooser.html
 		JButton btnBrowseFile = new JButton("Browse file...");
 		btnBrowseFile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
