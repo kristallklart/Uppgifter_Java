@@ -10,13 +10,20 @@ import Grupp7.Location;
 import Grupp7.Match;
 import Grupp7.Message;
 import Grupp7.Purpose;
-//import Grupp7.Uppgift2_ServiceSoapProxy;
 import Grupp7.User;
 import Grupp7.UserLocationPurpose;
 
 public class Utils {
 	
-	//static Uppgift2_ServiceSoapProxy proxy = new Uppgift2_ServiceSoapProxy();
+	private static DefaultTableModel model = new DefaultTableModel() {
+		private static final long serialVersionUID = 1L;
+
+		@Override
+		public boolean isCellEditable(int row, int column) {
+			return false;
+		}
+		
+	};
 	
 	public static DefaultTableModel getUsersTable() throws RemoteException{
 		
@@ -47,10 +54,9 @@ public class Utils {
 			showUsers.add(user.getIndustry());
 			
 			columnData.add(showUsers);
-			//TypeDesc td = user.getTypeDesc();
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -69,7 +75,7 @@ public class Utils {
 			columnData.add(showLocations);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -88,7 +94,7 @@ public class Utils {
 			columnData.add(showPurposes);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -115,7 +121,7 @@ public class Utils {
 			columnData.add(showUserLocationPurposes);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -128,15 +134,13 @@ public class Utils {
 		
 		columnNames.add("Industry");
 		
-		//Industry
-		
 		for (FieldOfProfession fieldOfProfession : fieldOfProfessions) {
 			Vector<Object> showUserLocationPurposes = new Vector<Object>();
 			showUserLocationPurposes.add(fieldOfProfession.getIndustry());
 			columnData.add(showUserLocationPurposes);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -157,7 +161,7 @@ public class Utils {
 			columnData.add(showMatches);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -182,7 +186,7 @@ public class Utils {
 			columnData.add(showMessages);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 }

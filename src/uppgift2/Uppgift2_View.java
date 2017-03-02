@@ -151,6 +151,7 @@ public class Uppgift2_View {
 		btnShowTable.setBounds(229, 15, 115, 29);
 		panelMain.add(btnShowTable);	
 		}
+	
 	private void clearFeedback() {
 		lblFeedback.setText("");
 	}
