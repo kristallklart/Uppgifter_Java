@@ -31,7 +31,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
 
-public class Uppgift3_View {
+public class Uppgift3View {
 
 	private JFrame frame;
 	private JLabel lblFeedback;
@@ -51,7 +51,7 @@ public class Uppgift3_View {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Uppgift3_View window = new Uppgift3_View();
+					Uppgift3View window = new Uppgift3View();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -63,7 +63,7 @@ public class Uppgift3_View {
 	/**
 	 * Create the application.
 	 */
-	public Uppgift3_View() {
+	public Uppgift3View() {
 		try{
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Windows".equals(info.getName())) {
