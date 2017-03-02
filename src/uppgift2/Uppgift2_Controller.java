@@ -15,50 +15,51 @@ public class Uppgift2_Controller {
 	public static DefaultTableModel getUsersTable() throws RemoteException{
 		return Utils.getUsersTable();
 	}
-	public static User[] getAllUsers() throws RemoteException {
+	/*public static User[] getAllUsers() throws RemoteException {
 		return Uppgift2_Dal.getAllUsers();
-	}
+	}*/
 	
 	public static DefaultTableModel getLocationsTable() throws RemoteException{
 		return Utils.getLocationsTable();
 	}
-	public static Location[] getAllLocations() throws RemoteException {
+	
+	/*public static Location[] getAllLocations() throws RemoteException {
 		return Uppgift2_Dal.getAllLocations();
-	}
+	}*/
 	
 	public static DefaultTableModel getPurposesTable() throws RemoteException{
 		return Utils.getPurposesTable();
 	}
-	public static UserLocationPurpose[] getAllUserLocationPurposes() throws RemoteException {
+	
+	/*public static UserLocationPurpose[] getAllUserLocationPurposes() throws RemoteException {
 		return Uppgift2_Dal.getAllUserLocationPurposes();
-	}
+	}*/
 	
 	public static DefaultTableModel getUserLocationPurposesTable() throws RemoteException{
 		return Utils.getUserLocationPurposesTable();
 	}
 
-	public static Purpose[] getAllPurposes() throws RemoteException {
+	/*public static Purpose[] getAllPurposes() throws RemoteException {
 		return Uppgift2_Dal.getAllPurposes();
-	}
+	}*/
 	
 	public static DefaultTableModel getFieldOfProfessionsTable() throws RemoteException{
 		return Utils.getFieldOfProfessionsTable();
 	}
-	public static FieldOfProfession[] getAllFieldOfProfessions() throws RemoteException {
+	
+	/*public static FieldOfProfession[] getAllFieldOfProfessions() throws RemoteException {
 		return Uppgift2_Dal.getAllFieldOfProfessions();
-	}
+	}*/
 	
 	public static DefaultTableModel getMatchesTable() throws RemoteException{
 		return Utils.getMatchesTable();
-	}
-	public static Match[] getAllMatches() throws RemoteException {
-		return Uppgift2_Dal.getAllMatches();
 	}
 	
 	public static DefaultTableModel getMessagesTable() throws RemoteException{
 		return Utils.getMessagesTable();
 	}
-	public static Message[] getAllMessages() throws RemoteException {
+	
+	/*public static Message[] getAllMessages() throws RemoteException {
 		return Uppgift2_Dal.getAllMessages();
-	}
+	}*/
 }

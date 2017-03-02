@@ -155,5 +155,3 @@ public class Uppgift2_View {
 		panelMain.add(btnShowTable);	
 		}
 	}
-
-
