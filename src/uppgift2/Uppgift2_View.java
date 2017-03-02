@@ -52,7 +52,6 @@ public class Uppgift2_View {
 				}
 			}
 			} catch (Exception e) {
-				//Hantera fel här
 				e.printStackTrace();
 			}
 		initialize();
@@ -95,11 +94,11 @@ public class Uppgift2_View {
 		btnShowTable = new JButton("Show Table");
 		btnShowTable.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				clearFeedback();
 				switch(comboBoxChooseTable.getSelectedIndex()){
 				case 0:
 					try {
-						tableResultTable.setModel(Uppgift2_Controller.getUsersTable());
-						
+						tableResultTable.setModel(Uppgift2_Controller.getUsersTable());						
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
 					}
@@ -114,7 +113,6 @@ public class Uppgift2_View {
 				case 2:
 					try {
 						tableResultTable.setModel(Uppgift2_Controller.getPurposesTable());
-
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
 					}
@@ -122,7 +120,6 @@ public class Uppgift2_View {
 				case 3:
 					try {
 						tableResultTable.setModel(Uppgift2_Controller.getUserLocationPurposesTable());
-
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
 					}
@@ -154,6 +151,9 @@ public class Uppgift2_View {
 		btnShowTable.setBounds(229, 15, 115, 29);
 		panelMain.add(btnShowTable);	
 		}
+	private void clearFeedback() {
+		lblFeedback.setText("");
 	}
+}
 
 

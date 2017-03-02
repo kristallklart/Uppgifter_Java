@@ -10,6 +10,16 @@ import Grupp7.uppgift3_ws.*;
 
 public class Utils {
 	
+	private static DefaultTableModel model = new DefaultTableModel() {
+		private static final long serialVersionUID = 1L;
+
+		@Override
+		public boolean isCellEditable(int row, int column) {
+			return false;
+		}
+		
+	};
+	
 	public static DefaultTableModel getEmployees() throws RemoteException{
 		
 		Employee[] employees = Dal.getEmployees();
@@ -36,7 +46,7 @@ public class Utils {
 		
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -59,7 +69,7 @@ public class Utils {
 			columnData.add(showEmployeeRelatives);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -84,7 +94,7 @@ public class Utils {
 			columnData.add(showPurposes);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -107,7 +117,7 @@ public class Utils {
 			columnData.add(showMostSick);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -126,7 +136,7 @@ public class Utils {
 			columnData.add(showKeys);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -153,7 +163,7 @@ public class Utils {
 			columnData.add(showIndices);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -176,7 +186,7 @@ public class Utils {
 			columnData.add(showConstraints);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -195,7 +205,7 @@ public class Utils {
 			columnData.add(showTables);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -214,7 +224,7 @@ public class Utils {
 			columnData.add(showTables);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -233,7 +243,7 @@ public class Utils {
 			columnData.add(showColumns);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 	
@@ -252,7 +262,7 @@ public class Utils {
 			columnData.add(showColumns);
 		}
 		
-		DefaultTableModel model = new DefaultTableModel(columnData, columnNames);
+		model.setDataVector(columnData, columnNames);
 		return model;
 	}
 
