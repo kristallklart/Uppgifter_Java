@@ -115,7 +115,7 @@ public class Uppgift1View {
 		            	textPaneContent.setText(Uppgift1Controller.getFileContent(fileName));
 						textFieldFileName.setText(file.getName());
 					} catch (RemoteException e) {
-						lblFeedback.setText("Message: Error, could not open file!");
+						lblFeedback.setText("Error: could not open file.");
 					} 
 		        }
 			}
