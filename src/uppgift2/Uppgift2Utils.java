@@ -51,7 +51,6 @@ public class Uppgift2Utils {
 			showUsers.add(user.getIndustry());
 			
 			columnData.add(showUsers);
-			//TypeDesc td = user.getTypeDesc();
 		}
 		
 		model.setDataVector(columnData, columnNames);
@@ -131,8 +130,6 @@ public class Uppgift2Utils {
 		Vector<String> columnNames = new Vector<String>();
 		
 		columnNames.add("Industry");
-		
-		//Industry
 		
 		for (FieldOfProfession fieldOfProfession : fieldOfProfessions) {
 			Vector<Object> showUserLocationPurposes = new Vector<Object>();
