@@ -5,14 +5,14 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
 public class Match  implements java.io.Serializable {
     private java.lang.String matchUsername;
 
     private java.lang.String username;
 
-    private Grupp7.User user;
+    private Grupp7.uppgift1_2_ws.User user;
 
     public Match() {
     }
@@ -20,7 +20,7 @@ public class Match  implements java.io.Serializable {
     public Match(
            java.lang.String matchUsername,
            java.lang.String username,
-           Grupp7.User user) {
+           Grupp7.uppgift1_2_ws.User user) {
            this.matchUsername = matchUsername;
            this.username = username;
            this.user = user;
@@ -72,7 +72,7 @@ public class Match  implements java.io.Serializable {
      * 
      * @return user
      */
-    public Grupp7.User getUser() {
+    public Grupp7.uppgift1_2_ws.User getUser() {
         return user;
     }
 
@@ -82,7 +82,7 @@ public class Match  implements java.io.Serializable {
      * 
      * @param user
      */
-    public void setUser(Grupp7.User user) {
+    public void setUser(Grupp7.uppgift1_2_ws.User user) {
         this.user = user;
     }
 

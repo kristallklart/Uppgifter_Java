@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
 public interface Uppgift1_Service extends javax.xml.rpc.Service {
 
@@ -17,7 +17,7 @@ public interface Uppgift1_Service extends javax.xml.rpc.Service {
  */
     public java.lang.String getUppgift1_ServiceSoapAddress();
 
-    public Grupp7.Uppgift1_ServiceSoap getUppgift1_ServiceSoap() throws javax.xml.rpc.ServiceException;
+    public Grupp7.uppgift1_2_ws.Uppgift1_ServiceSoap getUppgift1_ServiceSoap() throws javax.xml.rpc.ServiceException;
 
-    public Grupp7.Uppgift1_ServiceSoap getUppgift1_ServiceSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException;
+    public Grupp7.uppgift1_2_ws.Uppgift1_ServiceSoap getUppgift1_ServiceSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException;
 }

@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
-public class Uppgift2_ServiceLocator extends org.apache.axis.client.Service implements Grupp7.Uppgift2_Service {
+public class Uppgift2_ServiceLocator extends org.apache.axis.client.Service implements Grupp7.uppgift1_2_ws.Uppgift2_Service {
 
 /**
  * This web service has multiple web methods which all takes zero
@@ -47,7 +47,7 @@ public class Uppgift2_ServiceLocator extends org.apache.axis.client.Service impl
         Uppgift2_ServiceSoapWSDDServiceName = name;
     }
 
-    public Grupp7.Uppgift2_ServiceSoap getUppgift2_ServiceSoap() throws javax.xml.rpc.ServiceException {
+    public Grupp7.uppgift1_2_ws.Uppgift2_ServiceSoap getUppgift2_ServiceSoap() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(Uppgift2_ServiceSoap_address);
@@ -58,9 +58,9 @@ public class Uppgift2_ServiceLocator extends org.apache.axis.client.Service impl
         return getUppgift2_ServiceSoap(endpoint);
     }
 
-    public Grupp7.Uppgift2_ServiceSoap getUppgift2_ServiceSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public Grupp7.uppgift1_2_ws.Uppgift2_ServiceSoap getUppgift2_ServiceSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            Grupp7.Uppgift2_ServiceSoapStub _stub = new Grupp7.Uppgift2_ServiceSoapStub(portAddress, this);
+            Grupp7.uppgift1_2_ws.Uppgift2_ServiceSoapStub _stub = new Grupp7.uppgift1_2_ws.Uppgift2_ServiceSoapStub(portAddress, this);
             _stub.setPortName(getUppgift2_ServiceSoapWSDDServiceName());
             return _stub;
         }
@@ -80,8 +80,8 @@ public class Uppgift2_ServiceLocator extends org.apache.axis.client.Service impl
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (Grupp7.Uppgift2_ServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
-                Grupp7.Uppgift2_ServiceSoapStub _stub = new Grupp7.Uppgift2_ServiceSoapStub(new java.net.URL(Uppgift2_ServiceSoap_address), this);
+            if (Grupp7.uppgift1_2_ws.Uppgift2_ServiceSoap.class.isAssignableFrom(serviceEndpointInterface)) {
+                Grupp7.uppgift1_2_ws.Uppgift2_ServiceSoapStub _stub = new Grupp7.uppgift1_2_ws.Uppgift2_ServiceSoapStub(new java.net.URL(Uppgift2_ServiceSoap_address), this);
                 _stub.setPortName(getUppgift2_ServiceSoapWSDDServiceName());
                 return _stub;
             }

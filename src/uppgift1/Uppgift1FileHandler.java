@@ -2,7 +2,7 @@ package uppgift1;
 
 import java.rmi.RemoteException;
 
-import Grupp7.Uppgift1_ServiceSoapProxy;
+import Grupp7.uppgift1_2_ws.Uppgift1_ServiceSoapProxy;
 
 public class Uppgift1FileHandler {
 	

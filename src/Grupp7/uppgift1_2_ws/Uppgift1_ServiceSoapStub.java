@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
-public class Uppgift1_ServiceSoapStub extends org.apache.axis.client.Stub implements Grupp7.Uppgift1_ServiceSoap {
+public class Uppgift1_ServiceSoapStub extends org.apache.axis.client.Stub implements Grupp7.uppgift1_2_ws.Uppgift1_ServiceSoap {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();

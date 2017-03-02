@@ -1,71 +1,71 @@
 /**
- * FieldOfProfession.java
+ * Purpose.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
-public class FieldOfProfession  implements java.io.Serializable {
-    private java.lang.String industry;
+public class Purpose  implements java.io.Serializable {
+    private java.lang.String purposeType;
 
-    private Grupp7.User[] users;
+    private Grupp7.uppgift1_2_ws.UserLocationPurpose[] userLocationPurposes;
 
-    public FieldOfProfession() {
+    public Purpose() {
     }
 
-    public FieldOfProfession(
-           java.lang.String industry,
-           Grupp7.User[] users) {
-           this.industry = industry;
-           this.users = users;
-    }
-
-
-    /**
-     * Gets the industry value for this FieldOfProfession.
-     * 
-     * @return industry
-     */
-    public java.lang.String getIndustry() {
-        return industry;
+    public Purpose(
+           java.lang.String purposeType,
+           Grupp7.uppgift1_2_ws.UserLocationPurpose[] userLocationPurposes) {
+           this.purposeType = purposeType;
+           this.userLocationPurposes = userLocationPurposes;
     }
 
 
     /**
-     * Sets the industry value for this FieldOfProfession.
+     * Gets the purposeType value for this Purpose.
      * 
-     * @param industry
+     * @return purposeType
      */
-    public void setIndustry(java.lang.String industry) {
-        this.industry = industry;
+    public java.lang.String getPurposeType() {
+        return purposeType;
     }
 
 
     /**
-     * Gets the users value for this FieldOfProfession.
+     * Sets the purposeType value for this Purpose.
      * 
-     * @return users
+     * @param purposeType
      */
-    public Grupp7.User[] getUsers() {
-        return users;
+    public void setPurposeType(java.lang.String purposeType) {
+        this.purposeType = purposeType;
     }
 
 
     /**
-     * Sets the users value for this FieldOfProfession.
+     * Gets the userLocationPurposes value for this Purpose.
      * 
-     * @param users
+     * @return userLocationPurposes
      */
-    public void setUsers(Grupp7.User[] users) {
-        this.users = users;
+    public Grupp7.uppgift1_2_ws.UserLocationPurpose[] getUserLocationPurposes() {
+        return userLocationPurposes;
+    }
+
+
+    /**
+     * Sets the userLocationPurposes value for this Purpose.
+     * 
+     * @param userLocationPurposes
+     */
+    public void setUserLocationPurposes(Grupp7.uppgift1_2_ws.UserLocationPurpose[] userLocationPurposes) {
+        this.userLocationPurposes = userLocationPurposes;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FieldOfProfession)) return false;
-        FieldOfProfession other = (FieldOfProfession) obj;
+        if (!(obj instanceof Purpose)) return false;
+        Purpose other = (Purpose) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -74,12 +74,12 @@ public class FieldOfProfession  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            ((this.industry==null && other.getIndustry()==null) || 
-             (this.industry!=null &&
-              this.industry.equals(other.getIndustry()))) &&
-            ((this.users==null && other.getUsers()==null) || 
-             (this.users!=null &&
-              java.util.Arrays.equals(this.users, other.getUsers())));
+            ((this.purposeType==null && other.getPurposeType()==null) || 
+             (this.purposeType!=null &&
+              this.purposeType.equals(other.getPurposeType()))) &&
+            ((this.userLocationPurposes==null && other.getUserLocationPurposes()==null) || 
+             (this.userLocationPurposes!=null &&
+              java.util.Arrays.equals(this.userLocationPurposes, other.getUserLocationPurposes())));
         __equalsCalc = null;
         return _equals;
     }
@@ -91,14 +91,14 @@ public class FieldOfProfession  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        if (getIndustry() != null) {
-            _hashCode += getIndustry().hashCode();
+        if (getPurposeType() != null) {
+            _hashCode += getPurposeType().hashCode();
         }
-        if (getUsers() != null) {
+        if (getUserLocationPurposes() != null) {
             for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getUsers());
+                 i<java.lang.reflect.Array.getLength(getUserLocationPurposes());
                  i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getUsers(), i);
+                java.lang.Object obj = java.lang.reflect.Array.get(getUserLocationPurposes(), i);
                 if (obj != null &&
                     !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
@@ -111,24 +111,24 @@ public class FieldOfProfession  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FieldOfProfession.class, true);
+        new org.apache.axis.description.TypeDesc(Purpose.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("Grupp7", "FieldOfProfession"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("Grupp7", "Purpose"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("industry");
-        elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "Industry"));
+        elemField.setFieldName("purposeType");
+        elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "PurposeType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("users");
-        elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "Users"));
-        elemField.setXmlType(new javax.xml.namespace.QName("Grupp7", "User"));
+        elemField.setFieldName("userLocationPurposes");
+        elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "UserLocationPurposes"));
+        elemField.setXmlType(new javax.xml.namespace.QName("Grupp7", "UserLocationPurpose"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("Grupp7", "User"));
+        elemField.setItemQName(new javax.xml.namespace.QName("Grupp7", "UserLocationPurpose"));
         typeDesc.addFieldDesc(elemField);
     }
 

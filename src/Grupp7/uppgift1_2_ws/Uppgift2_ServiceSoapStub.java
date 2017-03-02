@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
-public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implements Grupp7.Uppgift2_ServiceSoap {
+public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implements Grupp7.uppgift1_2_ws.Uppgift2_ServiceSoap {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -26,7 +26,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllUsers");
         oper.setReturnType(new javax.xml.namespace.QName("Grupp7", "ArrayOfUser"));
-        oper.setReturnClass(Grupp7.User[].class);
+        oper.setReturnClass(Grupp7.uppgift1_2_ws.User[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("Grupp7", "GetAllUsersResult"));
         param = oper.getReturnParamDesc();
         param.setItemQName(new javax.xml.namespace.QName("Grupp7", "User"));
@@ -37,7 +37,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllPurposes");
         oper.setReturnType(new javax.xml.namespace.QName("Grupp7", "ArrayOfPurpose"));
-        oper.setReturnClass(Grupp7.Purpose[].class);
+        oper.setReturnClass(Grupp7.uppgift1_2_ws.Purpose[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("Grupp7", "GetAllPurposesResult"));
         param = oper.getReturnParamDesc();
         param.setItemQName(new javax.xml.namespace.QName("Grupp7", "Purpose"));
@@ -48,7 +48,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllLocations");
         oper.setReturnType(new javax.xml.namespace.QName("Grupp7", "ArrayOfLocation"));
-        oper.setReturnClass(Grupp7.Location[].class);
+        oper.setReturnClass(Grupp7.uppgift1_2_ws.Location[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("Grupp7", "GetAllLocationsResult"));
         param = oper.getReturnParamDesc();
         param.setItemQName(new javax.xml.namespace.QName("Grupp7", "Location"));
@@ -59,7 +59,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllUserLocationPurposes");
         oper.setReturnType(new javax.xml.namespace.QName("Grupp7", "ArrayOfUserLocationPurpose"));
-        oper.setReturnClass(Grupp7.UserLocationPurpose[].class);
+        oper.setReturnClass(Grupp7.uppgift1_2_ws.UserLocationPurpose[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("Grupp7", "GetAllUserLocationPurposesResult"));
         param = oper.getReturnParamDesc();
         param.setItemQName(new javax.xml.namespace.QName("Grupp7", "UserLocationPurpose"));
@@ -70,7 +70,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllFieldOfProfessions");
         oper.setReturnType(new javax.xml.namespace.QName("Grupp7", "ArrayOfFieldOfProfession"));
-        oper.setReturnClass(Grupp7.FieldOfProfession[].class);
+        oper.setReturnClass(Grupp7.uppgift1_2_ws.FieldOfProfession[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("Grupp7", "GetAllFieldOfProfessionsResult"));
         param = oper.getReturnParamDesc();
         param.setItemQName(new javax.xml.namespace.QName("Grupp7", "FieldOfProfession"));
@@ -81,7 +81,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllMessages");
         oper.setReturnType(new javax.xml.namespace.QName("Grupp7", "ArrayOfMessage"));
-        oper.setReturnClass(Grupp7.Message[].class);
+        oper.setReturnClass(Grupp7.uppgift1_2_ws.Message[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("Grupp7", "GetAllMessagesResult"));
         param = oper.getReturnParamDesc();
         param.setItemQName(new javax.xml.namespace.QName("Grupp7", "Message"));
@@ -92,7 +92,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllMatches");
         oper.setReturnType(new javax.xml.namespace.QName("Grupp7", "ArrayOfMatch"));
-        oper.setReturnClass(Grupp7.Match[].class);
+        oper.setReturnClass(Grupp7.uppgift1_2_ws.Match[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("Grupp7", "GetAllMatchesResult"));
         param = oper.getReturnParamDesc();
         param.setItemQName(new javax.xml.namespace.QName("Grupp7", "Match"));
@@ -133,7 +133,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("Grupp7", "ArrayOfFieldOfProfession");
             cachedSerQNames.add(qName);
-            cls = Grupp7.FieldOfProfession[].class;
+            cls = Grupp7.uppgift1_2_ws.FieldOfProfession[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("Grupp7", "FieldOfProfession");
             qName2 = new javax.xml.namespace.QName("Grupp7", "FieldOfProfession");
@@ -142,7 +142,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 
             qName = new javax.xml.namespace.QName("Grupp7", "ArrayOfLocation");
             cachedSerQNames.add(qName);
-            cls = Grupp7.Location[].class;
+            cls = Grupp7.uppgift1_2_ws.Location[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("Grupp7", "Location");
             qName2 = new javax.xml.namespace.QName("Grupp7", "Location");
@@ -151,7 +151,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 
             qName = new javax.xml.namespace.QName("Grupp7", "ArrayOfMatch");
             cachedSerQNames.add(qName);
-            cls = Grupp7.Match[].class;
+            cls = Grupp7.uppgift1_2_ws.Match[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("Grupp7", "Match");
             qName2 = new javax.xml.namespace.QName("Grupp7", "Match");
@@ -160,7 +160,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 
             qName = new javax.xml.namespace.QName("Grupp7", "ArrayOfMessage");
             cachedSerQNames.add(qName);
-            cls = Grupp7.Message[].class;
+            cls = Grupp7.uppgift1_2_ws.Message[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("Grupp7", "Message");
             qName2 = new javax.xml.namespace.QName("Grupp7", "Message");
@@ -169,7 +169,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 
             qName = new javax.xml.namespace.QName("Grupp7", "ArrayOfPurpose");
             cachedSerQNames.add(qName);
-            cls = Grupp7.Purpose[].class;
+            cls = Grupp7.uppgift1_2_ws.Purpose[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("Grupp7", "Purpose");
             qName2 = new javax.xml.namespace.QName("Grupp7", "Purpose");
@@ -178,7 +178,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 
             qName = new javax.xml.namespace.QName("Grupp7", "ArrayOfUser");
             cachedSerQNames.add(qName);
-            cls = Grupp7.User[].class;
+            cls = Grupp7.uppgift1_2_ws.User[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("Grupp7", "User");
             qName2 = new javax.xml.namespace.QName("Grupp7", "User");
@@ -187,7 +187,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 
             qName = new javax.xml.namespace.QName("Grupp7", "ArrayOfUserLocationPurpose");
             cachedSerQNames.add(qName);
-            cls = Grupp7.UserLocationPurpose[].class;
+            cls = Grupp7.uppgift1_2_ws.UserLocationPurpose[].class;
             cachedSerClasses.add(cls);
             qName = new javax.xml.namespace.QName("Grupp7", "UserLocationPurpose");
             qName2 = new javax.xml.namespace.QName("Grupp7", "UserLocationPurpose");
@@ -196,49 +196,49 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 
             qName = new javax.xml.namespace.QName("Grupp7", "FieldOfProfession");
             cachedSerQNames.add(qName);
-            cls = Grupp7.FieldOfProfession.class;
+            cls = Grupp7.uppgift1_2_ws.FieldOfProfession.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("Grupp7", "Location");
             cachedSerQNames.add(qName);
-            cls = Grupp7.Location.class;
+            cls = Grupp7.uppgift1_2_ws.Location.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("Grupp7", "Match");
             cachedSerQNames.add(qName);
-            cls = Grupp7.Match.class;
+            cls = Grupp7.uppgift1_2_ws.Match.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("Grupp7", "Message");
             cachedSerQNames.add(qName);
-            cls = Grupp7.Message.class;
+            cls = Grupp7.uppgift1_2_ws.Message.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("Grupp7", "Purpose");
             cachedSerQNames.add(qName);
-            cls = Grupp7.Purpose.class;
+            cls = Grupp7.uppgift1_2_ws.Purpose.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("Grupp7", "User");
             cachedSerQNames.add(qName);
-            cls = Grupp7.User.class;
+            cls = Grupp7.uppgift1_2_ws.User.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
             qName = new javax.xml.namespace.QName("Grupp7", "UserLocationPurpose");
             cachedSerQNames.add(qName);
-            cls = Grupp7.UserLocationPurpose.class;
+            cls = Grupp7.uppgift1_2_ws.UserLocationPurpose.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -309,7 +309,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         }
     }
 
-    public Grupp7.User[] getAllUsers() throws java.rmi.RemoteException {
+    public Grupp7.uppgift1_2_ws.User[] getAllUsers() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -333,9 +333,9 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         else {
             extractAttachments(_call);
             try {
-                return (Grupp7.User[]) _resp;
+                return (Grupp7.uppgift1_2_ws.User[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (Grupp7.User[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.User[].class);
+                return (Grupp7.uppgift1_2_ws.User[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.uppgift1_2_ws.User[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -343,7 +343,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 }
     }
 
-    public Grupp7.Purpose[] getAllPurposes() throws java.rmi.RemoteException {
+    public Grupp7.uppgift1_2_ws.Purpose[] getAllPurposes() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -367,9 +367,9 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         else {
             extractAttachments(_call);
             try {
-                return (Grupp7.Purpose[]) _resp;
+                return (Grupp7.uppgift1_2_ws.Purpose[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (Grupp7.Purpose[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.Purpose[].class);
+                return (Grupp7.uppgift1_2_ws.Purpose[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.uppgift1_2_ws.Purpose[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -377,7 +377,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 }
     }
 
-    public Grupp7.Location[] getAllLocations() throws java.rmi.RemoteException {
+    public Grupp7.uppgift1_2_ws.Location[] getAllLocations() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -401,9 +401,9 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         else {
             extractAttachments(_call);
             try {
-                return (Grupp7.Location[]) _resp;
+                return (Grupp7.uppgift1_2_ws.Location[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (Grupp7.Location[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.Location[].class);
+                return (Grupp7.uppgift1_2_ws.Location[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.uppgift1_2_ws.Location[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -411,7 +411,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 }
     }
 
-    public Grupp7.UserLocationPurpose[] getAllUserLocationPurposes() throws java.rmi.RemoteException {
+    public Grupp7.uppgift1_2_ws.UserLocationPurpose[] getAllUserLocationPurposes() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -435,9 +435,9 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         else {
             extractAttachments(_call);
             try {
-                return (Grupp7.UserLocationPurpose[]) _resp;
+                return (Grupp7.uppgift1_2_ws.UserLocationPurpose[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (Grupp7.UserLocationPurpose[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.UserLocationPurpose[].class);
+                return (Grupp7.uppgift1_2_ws.UserLocationPurpose[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.uppgift1_2_ws.UserLocationPurpose[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -445,7 +445,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 }
     }
 
-    public Grupp7.FieldOfProfession[] getAllFieldOfProfessions() throws java.rmi.RemoteException {
+    public Grupp7.uppgift1_2_ws.FieldOfProfession[] getAllFieldOfProfessions() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -469,9 +469,9 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         else {
             extractAttachments(_call);
             try {
-                return (Grupp7.FieldOfProfession[]) _resp;
+                return (Grupp7.uppgift1_2_ws.FieldOfProfession[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (Grupp7.FieldOfProfession[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.FieldOfProfession[].class);
+                return (Grupp7.uppgift1_2_ws.FieldOfProfession[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.uppgift1_2_ws.FieldOfProfession[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -479,7 +479,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 }
     }
 
-    public Grupp7.Message[] getAllMessages() throws java.rmi.RemoteException {
+    public Grupp7.uppgift1_2_ws.Message[] getAllMessages() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -503,9 +503,9 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         else {
             extractAttachments(_call);
             try {
-                return (Grupp7.Message[]) _resp;
+                return (Grupp7.uppgift1_2_ws.Message[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (Grupp7.Message[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.Message[].class);
+                return (Grupp7.uppgift1_2_ws.Message[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.uppgift1_2_ws.Message[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -513,7 +513,7 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
 }
     }
 
-    public Grupp7.Match[] getAllMatches() throws java.rmi.RemoteException {
+    public Grupp7.uppgift1_2_ws.Match[] getAllMatches() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -537,9 +537,9 @@ public class Uppgift2_ServiceSoapStub extends org.apache.axis.client.Stub implem
         else {
             extractAttachments(_call);
             try {
-                return (Grupp7.Match[]) _resp;
+                return (Grupp7.uppgift1_2_ws.Match[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (Grupp7.Match[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.Match[].class);
+                return (Grupp7.uppgift1_2_ws.Match[]) org.apache.axis.utils.JavaUtils.convert(_resp, Grupp7.uppgift1_2_ws.Match[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
 public class User  implements java.io.Serializable {
     private java.lang.String userName;
@@ -26,13 +26,13 @@ public class User  implements java.io.Serializable {
 
     private java.lang.String industry;
 
-    private Grupp7.FieldOfProfession fieldOfProfession;
+    private Grupp7.uppgift1_2_ws.FieldOfProfession fieldOfProfession;
 
-    private Grupp7.UserLocationPurpose[] userLocationPurposes;
+    private Grupp7.uppgift1_2_ws.UserLocationPurpose[] userLocationPurposes;
 
-    private Grupp7.Match[] matches;
+    private Grupp7.uppgift1_2_ws.Match[] matches;
 
-    private Grupp7.Message[] messages;
+    private Grupp7.uppgift1_2_ws.Message[] messages;
 
     public User() {
     }
@@ -47,10 +47,10 @@ public class User  implements java.io.Serializable {
            java.lang.String password,
            java.lang.String about,
            java.lang.String industry,
-           Grupp7.FieldOfProfession fieldOfProfession,
-           Grupp7.UserLocationPurpose[] userLocationPurposes,
-           Grupp7.Match[] matches,
-           Grupp7.Message[] messages) {
+           Grupp7.uppgift1_2_ws.FieldOfProfession fieldOfProfession,
+           Grupp7.uppgift1_2_ws.UserLocationPurpose[] userLocationPurposes,
+           Grupp7.uppgift1_2_ws.Match[] matches,
+           Grupp7.uppgift1_2_ws.Message[] messages) {
            this.userName = userName;
            this.firstName = firstName;
            this.lastName = lastName;
@@ -252,7 +252,7 @@ public class User  implements java.io.Serializable {
      * 
      * @return fieldOfProfession
      */
-    public Grupp7.FieldOfProfession getFieldOfProfession() {
+    public Grupp7.uppgift1_2_ws.FieldOfProfession getFieldOfProfession() {
         return fieldOfProfession;
     }
 
@@ -262,7 +262,7 @@ public class User  implements java.io.Serializable {
      * 
      * @param fieldOfProfession
      */
-    public void setFieldOfProfession(Grupp7.FieldOfProfession fieldOfProfession) {
+    public void setFieldOfProfession(Grupp7.uppgift1_2_ws.FieldOfProfession fieldOfProfession) {
         this.fieldOfProfession = fieldOfProfession;
     }
 
@@ -272,7 +272,7 @@ public class User  implements java.io.Serializable {
      * 
      * @return userLocationPurposes
      */
-    public Grupp7.UserLocationPurpose[] getUserLocationPurposes() {
+    public Grupp7.uppgift1_2_ws.UserLocationPurpose[] getUserLocationPurposes() {
         return userLocationPurposes;
     }
 
@@ -282,7 +282,7 @@ public class User  implements java.io.Serializable {
      * 
      * @param userLocationPurposes
      */
-    public void setUserLocationPurposes(Grupp7.UserLocationPurpose[] userLocationPurposes) {
+    public void setUserLocationPurposes(Grupp7.uppgift1_2_ws.UserLocationPurpose[] userLocationPurposes) {
         this.userLocationPurposes = userLocationPurposes;
     }
 
@@ -292,7 +292,7 @@ public class User  implements java.io.Serializable {
      * 
      * @return matches
      */
-    public Grupp7.Match[] getMatches() {
+    public Grupp7.uppgift1_2_ws.Match[] getMatches() {
         return matches;
     }
 
@@ -302,7 +302,7 @@ public class User  implements java.io.Serializable {
      * 
      * @param matches
      */
-    public void setMatches(Grupp7.Match[] matches) {
+    public void setMatches(Grupp7.uppgift1_2_ws.Match[] matches) {
         this.matches = matches;
     }
 
@@ -312,7 +312,7 @@ public class User  implements java.io.Serializable {
      * 
      * @return messages
      */
-    public Grupp7.Message[] getMessages() {
+    public Grupp7.uppgift1_2_ws.Message[] getMessages() {
         return messages;
     }
 
@@ -322,7 +322,7 @@ public class User  implements java.io.Serializable {
      * 
      * @param messages
      */
-    public void setMessages(Grupp7.Message[] messages) {
+    public void setMessages(Grupp7.uppgift1_2_ws.Message[] messages) {
         this.messages = messages;
     }
 

@@ -5,14 +5,14 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
 public class UserLocationPurpose  implements java.io.Serializable {
-    private Grupp7.User user;
+    private Grupp7.uppgift1_2_ws.User user;
 
-    private Grupp7.Location location;
+    private Grupp7.uppgift1_2_ws.Location location;
 
-    private Grupp7.Purpose purpose;
+    private Grupp7.uppgift1_2_ws.Purpose purpose;
 
     private java.lang.String city;
 
@@ -28,9 +28,9 @@ public class UserLocationPurpose  implements java.io.Serializable {
     }
 
     public UserLocationPurpose(
-           Grupp7.User user,
-           Grupp7.Location location,
-           Grupp7.Purpose purpose,
+           Grupp7.uppgift1_2_ws.User user,
+           Grupp7.uppgift1_2_ws.Location location,
+           Grupp7.uppgift1_2_ws.Purpose purpose,
            java.lang.String city,
            java.lang.String username,
            java.lang.String purposetype,
@@ -52,7 +52,7 @@ public class UserLocationPurpose  implements java.io.Serializable {
      * 
      * @return user
      */
-    public Grupp7.User getUser() {
+    public Grupp7.uppgift1_2_ws.User getUser() {
         return user;
     }
 
@@ -62,7 +62,7 @@ public class UserLocationPurpose  implements java.io.Serializable {
      * 
      * @param user
      */
-    public void setUser(Grupp7.User user) {
+    public void setUser(Grupp7.uppgift1_2_ws.User user) {
         this.user = user;
     }
 
@@ -72,7 +72,7 @@ public class UserLocationPurpose  implements java.io.Serializable {
      * 
      * @return location
      */
-    public Grupp7.Location getLocation() {
+    public Grupp7.uppgift1_2_ws.Location getLocation() {
         return location;
     }
 
@@ -82,7 +82,7 @@ public class UserLocationPurpose  implements java.io.Serializable {
      * 
      * @param location
      */
-    public void setLocation(Grupp7.Location location) {
+    public void setLocation(Grupp7.uppgift1_2_ws.Location location) {
         this.location = location;
     }
 
@@ -92,7 +92,7 @@ public class UserLocationPurpose  implements java.io.Serializable {
      * 
      * @return purpose
      */
-    public Grupp7.Purpose getPurpose() {
+    public Grupp7.uppgift1_2_ws.Purpose getPurpose() {
         return purpose;
     }
 
@@ -102,7 +102,7 @@ public class UserLocationPurpose  implements java.io.Serializable {
      * 
      * @param purpose
      */
-    public void setPurpose(Grupp7.Purpose purpose) {
+    public void setPurpose(Grupp7.uppgift1_2_ws.Purpose purpose) {
         this.purpose = purpose;
     }
 

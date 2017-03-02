@@ -1,14 +1,15 @@
 package uppgift2;
 
 import java.rmi.RemoteException;
-import Grupp7.FieldOfProfession;
-import Grupp7.Location;
-import Grupp7.Match;
-import Grupp7.Message;
-import Grupp7.Purpose;
-import Grupp7.Uppgift2_ServiceSoapProxy;
-import Grupp7.User;
-import Grupp7.UserLocationPurpose;
+
+import Grupp7.uppgift1_2_ws.FieldOfProfession;
+import Grupp7.uppgift1_2_ws.Location;
+import Grupp7.uppgift1_2_ws.Match;
+import Grupp7.uppgift1_2_ws.Message;
+import Grupp7.uppgift1_2_ws.Purpose;
+import Grupp7.uppgift1_2_ws.Uppgift2_ServiceSoapProxy;
+import Grupp7.uppgift1_2_ws.User;
+import Grupp7.uppgift1_2_ws.UserLocationPurpose;
 
 public class Uppgift2Dal {
 	

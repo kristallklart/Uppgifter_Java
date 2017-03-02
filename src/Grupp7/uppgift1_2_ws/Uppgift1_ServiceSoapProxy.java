@@ -1,8 +1,8 @@
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
-public class Uppgift1_ServiceSoapProxy implements Grupp7.Uppgift1_ServiceSoap {
+public class Uppgift1_ServiceSoapProxy implements Grupp7.uppgift1_2_ws.Uppgift1_ServiceSoap {
   private String _endpoint = null;
-  private Grupp7.Uppgift1_ServiceSoap uppgift1_ServiceSoap = null;
+  private Grupp7.uppgift1_2_ws.Uppgift1_ServiceSoap uppgift1_ServiceSoap = null;
   
   public Uppgift1_ServiceSoapProxy() {
     _initUppgift1_ServiceSoapProxy();
@@ -15,7 +15,7 @@ public class Uppgift1_ServiceSoapProxy implements Grupp7.Uppgift1_ServiceSoap {
   
   private void _initUppgift1_ServiceSoapProxy() {
     try {
-      uppgift1_ServiceSoap = (new Grupp7.Uppgift1_ServiceLocator()).getUppgift1_ServiceSoap();
+      uppgift1_ServiceSoap = (new Grupp7.uppgift1_2_ws.Uppgift1_ServiceLocator()).getUppgift1_ServiceSoap();
       if (uppgift1_ServiceSoap != null) {
         if (_endpoint != null)
           ((javax.xml.rpc.Stub)uppgift1_ServiceSoap)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
@@ -38,7 +38,7 @@ public class Uppgift1_ServiceSoapProxy implements Grupp7.Uppgift1_ServiceSoap {
     
   }
   
-  public Grupp7.Uppgift1_ServiceSoap getUppgift1_ServiceSoap() {
+  public Grupp7.uppgift1_2_ws.Uppgift1_ServiceSoap getUppgift1_ServiceSoap() {
     if (uppgift1_ServiceSoap == null)
       _initUppgift1_ServiceSoapProxy();
     return uppgift1_ServiceSoap;

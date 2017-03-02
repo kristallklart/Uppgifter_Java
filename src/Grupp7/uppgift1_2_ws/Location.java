@@ -1,71 +1,71 @@
 /**
- * Purpose.java
+ * Location.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package Grupp7;
+package Grupp7.uppgift1_2_ws;
 
-public class Purpose  implements java.io.Serializable {
-    private java.lang.String purposeType;
+public class Location  implements java.io.Serializable {
+    private java.lang.String city;
 
-    private Grupp7.UserLocationPurpose[] userLocationPurposes;
+    private Grupp7.uppgift1_2_ws.UserLocationPurpose[] userLocationPurposes;
 
-    public Purpose() {
+    public Location() {
     }
 
-    public Purpose(
-           java.lang.String purposeType,
-           Grupp7.UserLocationPurpose[] userLocationPurposes) {
-           this.purposeType = purposeType;
+    public Location(
+           java.lang.String city,
+           Grupp7.uppgift1_2_ws.UserLocationPurpose[] userLocationPurposes) {
+           this.city = city;
            this.userLocationPurposes = userLocationPurposes;
     }
 
 
     /**
-     * Gets the purposeType value for this Purpose.
+     * Gets the city value for this Location.
      * 
-     * @return purposeType
+     * @return city
      */
-    public java.lang.String getPurposeType() {
-        return purposeType;
+    public java.lang.String getCity() {
+        return city;
     }
 
 
     /**
-     * Sets the purposeType value for this Purpose.
+     * Sets the city value for this Location.
      * 
-     * @param purposeType
+     * @param city
      */
-    public void setPurposeType(java.lang.String purposeType) {
-        this.purposeType = purposeType;
+    public void setCity(java.lang.String city) {
+        this.city = city;
     }
 
 
     /**
-     * Gets the userLocationPurposes value for this Purpose.
+     * Gets the userLocationPurposes value for this Location.
      * 
      * @return userLocationPurposes
      */
-    public Grupp7.UserLocationPurpose[] getUserLocationPurposes() {
+    public Grupp7.uppgift1_2_ws.UserLocationPurpose[] getUserLocationPurposes() {
         return userLocationPurposes;
     }
 
 
     /**
-     * Sets the userLocationPurposes value for this Purpose.
+     * Sets the userLocationPurposes value for this Location.
      * 
      * @param userLocationPurposes
      */
-    public void setUserLocationPurposes(Grupp7.UserLocationPurpose[] userLocationPurposes) {
+    public void setUserLocationPurposes(Grupp7.uppgift1_2_ws.UserLocationPurpose[] userLocationPurposes) {
         this.userLocationPurposes = userLocationPurposes;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Purpose)) return false;
-        Purpose other = (Purpose) obj;
+        if (!(obj instanceof Location)) return false;
+        Location other = (Location) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -74,9 +74,9 @@ public class Purpose  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            ((this.purposeType==null && other.getPurposeType()==null) || 
-             (this.purposeType!=null &&
-              this.purposeType.equals(other.getPurposeType()))) &&
+            ((this.city==null && other.getCity()==null) || 
+             (this.city!=null &&
+              this.city.equals(other.getCity()))) &&
             ((this.userLocationPurposes==null && other.getUserLocationPurposes()==null) || 
              (this.userLocationPurposes!=null &&
               java.util.Arrays.equals(this.userLocationPurposes, other.getUserLocationPurposes())));
@@ -91,8 +91,8 @@ public class Purpose  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        if (getPurposeType() != null) {
-            _hashCode += getPurposeType().hashCode();
+        if (getCity() != null) {
+            _hashCode += getCity().hashCode();
         }
         if (getUserLocationPurposes() != null) {
             for (int i=0;
@@ -111,13 +111,13 @@ public class Purpose  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Purpose.class, true);
+        new org.apache.axis.description.TypeDesc(Location.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("Grupp7", "Purpose"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("Grupp7", "Location"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("purposeType");
-        elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "PurposeType"));
+        elemField.setFieldName("city");
+        elemField.setXmlName(new javax.xml.namespace.QName("Grupp7", "City"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
