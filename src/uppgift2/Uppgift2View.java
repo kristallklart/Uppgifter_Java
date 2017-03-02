@@ -94,7 +94,7 @@ public class Uppgift2View {
 		btnShowTable = new JButton("Show Table");
 		btnShowTable.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				clearFeedback();
+				lblFeedback.setText("");
 				switch(comboBoxChooseTable.getSelectedIndex()){
 				case 0:
 					try {
@@ -150,9 +150,6 @@ public class Uppgift2View {
 		});
 		btnShowTable.setBounds(229, 15, 115, 29);
 		panelMain.add(btnShowTable);	
-		}
-	private void clearFeedback() {
-		lblFeedback.setText("");
 	}
 }
 

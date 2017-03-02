@@ -32,7 +32,6 @@ public class Uppgift3View {
 	private JTextField textFieldAddUpdateEmployeeNo;
 	private JTextField textFieldFirstName;
 	private JTextField textFieldLastName;
-	private ArrayList<JTextField> textFields = new ArrayList<JTextField>();
 	private final String errorMessage = "Error: Could not load the table.";
 	private JTextField textFieldDeleteEmployeeNo;
 
@@ -87,12 +86,7 @@ public class Uppgift3View {
 		lblFeedback = new JLabel();
 		lblFeedback.setBounds(10, 694, 1244, 27);
 		contentPane.add(lblFeedback);
-
-		// ***************************************
-		// ***********CRONUS ACCESS TAB***********
-		// ***************************************
-
-		//table_Caccess = new JTable();
+		
 		JPanel panelCronusAccess = new JPanel();
 		tabbedPane.addTab("Cronus Access", panelCronusAccess);
 		panelCronusAccess.setLayout(null);
@@ -208,7 +202,7 @@ public class Uppgift3View {
 					}
 					break;
 				case 1:
-					//Indexes
+					//Indices
 					try {
 						DefaultTableModel model = Uppgift3Controller.getIndices();
 						tableCronusAccess.setModel(model);
@@ -317,7 +311,6 @@ public class Uppgift3View {
 		textFieldAddUpdateEmployeeNo.setBounds(123, 26, 236, 26);
 		panelAddUpdate.add(textFieldAddUpdateEmployeeNo);
 		textFieldAddUpdateEmployeeNo.setColumns(10);
-		textFields.add(textFieldAddUpdateEmployeeNo);
 		
 		JLabel lblFirstName = new JLabel("First name:");
 		lblFirstName.setBounds(15, 67, 104, 20);
@@ -331,13 +324,11 @@ public class Uppgift3View {
 		textFieldFirstName.setBounds(123, 64, 236, 26);
 		panelAddUpdate.add(textFieldFirstName);
 		textFieldFirstName.setColumns(10);
-		textFields.add(textFieldFirstName);
 		
 		textFieldLastName = new JTextField();
 		textFieldLastName.setBounds(123, 101, 236, 26);
 		panelAddUpdate.add(textFieldLastName);
 		textFieldLastName.setColumns(10);
-		textFields.add(textFieldLastName);
 		
 		JButton btnUpdateEmployee = new JButton("Update Employee");
 		btnUpdateEmployee.addActionListener(new ActionListener() {
@@ -429,12 +420,6 @@ public class Uppgift3View {
 				}
 			}
 		});
-	}
-	
-	private void clearTextFields() {
-		for (JTextField field : textFields) {
-			field.setText("");
-		}
 	}
 	
 	private boolean validateAddUpdateInput() {

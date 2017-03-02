@@ -1,5 +1,4 @@
 package uppgift1;
-//import Uppgift1_OpenFile;
 
 import java.rmi.RemoteException;
 
