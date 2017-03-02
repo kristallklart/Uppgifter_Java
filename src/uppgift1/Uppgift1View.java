@@ -19,7 +19,7 @@ import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.border.TitledBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-public class Uppgift1_View {
+public class Uppgift1View {
 
 	private JFrame frameOpenFile;
 	private JFileChooser fileChooser;
@@ -32,7 +32,7 @@ public class Uppgift1_View {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Uppgift1_View window = new Uppgift1_View();
+					Uppgift1View window = new Uppgift1View();
 					window.frameOpenFile.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,7 +44,7 @@ public class Uppgift1_View {
 	/**
 	 * Create the application.
 	 */
-	public Uppgift1_View() {
+	public Uppgift1View() {
 		try{
 		for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 			if ("Windows".equals(info.getName())) {
@@ -112,10 +112,10 @@ public class Uppgift1_View {
 		            String fileName;
 		            fileName = file.getPath();
 		            try {
-		            	textPaneContent.setText(Uppgift1_Controller.getFileContent(fileName));
+		            	textPaneContent.setText(Uppgift1Controller.getFileContent(fileName));
 						textFieldFileName.setText(file.getName());
 					} catch (RemoteException e) {
-						lblFeedback.setText("Message: Error, could not open file!");
+						lblFeedback.setText("Error: could not open file.");
 					} 
 		        }
 			}

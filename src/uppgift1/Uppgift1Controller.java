@@ -3,9 +3,9 @@ package uppgift1;
 
 import java.rmi.RemoteException;
 
-public class Uppgift1_Controller {
+public class Uppgift1Controller {
 	
 	public static String getFileContent(String s) throws RemoteException {
-		return Uppgift1_FileHandler.getFileContent(s);
+		return Uppgift1FileHandler.getFileContent(s);
 	}
 }

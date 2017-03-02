@@ -8,7 +8,7 @@ import javax.swing.table.DefaultTableModel;
 import Grupp7.uppgift3_ws.*;
 
 
-public class Utils {
+public class Uppgift3Utils {
 	
 	private static DefaultTableModel model = new DefaultTableModel() {
 		private static final long serialVersionUID = 1L;
@@ -22,7 +22,7 @@ public class Utils {
 	
 	public static DefaultTableModel getEmployees() throws RemoteException{
 		
-		Employee[] employees = Dal.getEmployees();
+		Employee[] employees = Uppgift3Dal.getEmployees();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -51,7 +51,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getEmployeeRelatives() throws RemoteException{
-		EmployeeRelative[] employeeRelatives = Dal.getEmployeeRelatives();
+		EmployeeRelative[] employeeRelatives = Uppgift3Dal.getEmployeeRelatives();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -74,7 +74,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getSickleave() throws RemoteException{
-		Employee[] employees = Dal.getSickleave();
+		Employee[] employees = Uppgift3Dal.getSickleave();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -99,7 +99,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getMostSick() throws RemoteException{
-		Employee[] employees = Dal.getMostSick();
+		Employee[] employees = Uppgift3Dal.getMostSick();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -122,7 +122,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getKeys() throws RemoteException{
-		String[] keys = Dal.getKeys();
+		String[] keys = Uppgift3Dal.getKeys();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -141,7 +141,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getIndices() throws RemoteException{
-		Index[] indices = Dal.getIndices();
+		Index[] indices = Uppgift3Dal.getIndices();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -168,7 +168,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getConstraints() throws RemoteException{
-		TableConstraint[] constraints = Dal.getConstraints();
+		TableConstraint[] constraints = Uppgift3Dal.getConstraints();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -191,7 +191,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getTablesOne() throws RemoteException{
-		String[] tables = Dal.getTablesOne();
+		String[] tables = Uppgift3Dal.getTablesOne();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -210,7 +210,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getTablesTwo() throws RemoteException{
-		String[] tables = Dal.getTablesTwo();
+		String[] tables = Uppgift3Dal.getTablesTwo();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -229,7 +229,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getColumnsOne() throws RemoteException{
-		String[] columns = Dal.getColumnsOne();
+		String[] columns = Uppgift3Dal.getColumnsOne();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -248,7 +248,7 @@ public class Utils {
 	}
 	
 	public static DefaultTableModel getColumnsTwo() throws RemoteException{
-		String[] tables = Dal.getColumnsTwo();
+		String[] tables = Uppgift3Dal.getColumnsTwo();
 		
 		Vector<Vector<Object>> columnData = new Vector<Vector<Object>>();
 
@@ -267,14 +267,14 @@ public class Utils {
 	}
 
 	public static int updateEmployee(String employeeNumber, String firstname, String lastname) throws RemoteException {
-        return Dal.updateEmployee(employeeNumber, firstname, lastname);
+        return Uppgift3Dal.updateEmployee(employeeNumber, firstname, lastname);
     }
 
     public static int addEmployee(String employeeNumber, String firstname, String lastname) throws RemoteException {
-        return Dal.addEmployee(employeeNumber, firstname, lastname);
+        return Uppgift3Dal.addEmployee(employeeNumber, firstname, lastname);
     }
 
     public static int deleteEmployee(String employeeNumber) throws RemoteException {
-        return Dal.deleteEmployee(employeeNumber);
+        return Uppgift3Dal.deleteEmployee(employeeNumber);
     }
 }

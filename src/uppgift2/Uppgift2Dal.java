@@ -10,7 +10,7 @@ import Grupp7.Uppgift2_ServiceSoapProxy;
 import Grupp7.User;
 import Grupp7.UserLocationPurpose;
 
-public class Uppgift2_Dal {
+public class Uppgift2Dal {
 	
 	static Uppgift2_ServiceSoapProxy proxy = new Uppgift2_ServiceSoapProxy();
 

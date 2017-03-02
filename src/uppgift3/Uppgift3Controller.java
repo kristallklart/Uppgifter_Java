@@ -6,61 +6,61 @@ import javax.swing.table.DefaultTableModel;
 
 import Grupp7.uppgift3_ws.*;
 
-public class Controller {
+public class Uppgift3Controller {
 
     public static DefaultTableModel getEmployees() throws RemoteException {
-        return Utils.getEmployees();
+        return Uppgift3Utils.getEmployees();
     }
 
     public static DefaultTableModel getEmployeeRelatives() throws RemoteException {
-        return Utils.getEmployeeRelatives();
+        return Uppgift3Utils.getEmployeeRelatives();
     }
 
     public static DefaultTableModel getSickleave() throws RemoteException {
-        return Utils.getSickleave();
+        return Uppgift3Utils.getSickleave();
     }
 
     public static DefaultTableModel getMostSick() throws RemoteException {
-        return Utils.getMostSick();
+        return Uppgift3Utils.getMostSick();
     }
 
     public static DefaultTableModel getKeys() throws RemoteException {
-        return Utils.getKeys();
+        return Uppgift3Utils.getKeys();
     }
 
     public static DefaultTableModel getIndices() throws RemoteException {
-        return Utils.getIndices();
+        return Uppgift3Utils.getIndices();
     }
 
     public static DefaultTableModel getConstraints() throws RemoteException {
-        return Utils.getConstraints();
+        return Uppgift3Utils.getConstraints();
     }
 
     public static DefaultTableModel getTablesOne() throws RemoteException {
-        return Utils.getTablesOne();
+        return Uppgift3Utils.getTablesOne();
     }
     
     public static DefaultTableModel getTablesTwo() throws RemoteException {
-        return Utils.getTablesTwo();
+        return Uppgift3Utils.getTablesTwo();
     }
 
     public static DefaultTableModel getColumnsOne() throws RemoteException {
-        return Utils.getColumnsOne();
+        return Uppgift3Utils.getColumnsOne();
     }
     
     public static DefaultTableModel getColumnsTwo() throws RemoteException {
-        return Utils.getColumnsTwo();
+        return Uppgift3Utils.getColumnsTwo();
     }
 
     public static int updateEmployee(String employeeNumber, String firstname, String lastname) throws RemoteException {
-        return Utils.updateEmployee(employeeNumber, firstname, lastname);
+        return Uppgift3Utils.updateEmployee(employeeNumber, firstname, lastname);
     }
 
     public static int addEmployee(String employeeNumber, String firstname, String lastname) throws RemoteException {
-        return Utils.addEmployee(employeeNumber, firstname, lastname);
+        return Uppgift3Utils.addEmployee(employeeNumber, firstname, lastname);
     }
 
     public static int deleteEmployee(String employeeNumber) throws RemoteException {
-        return Utils.deleteEmployee(employeeNumber);
+        return Uppgift3Utils.deleteEmployee(employeeNumber);
     }
 }

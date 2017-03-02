@@ -140,7 +140,7 @@ public class Uppgift3_View {
 				case 0:
 					//Employee
 					try {
-						DefaultTableModel model = Controller.getEmployees();
+						DefaultTableModel model = Uppgift3Controller.getEmployees();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
@@ -150,7 +150,7 @@ public class Uppgift3_View {
 				case 1:
 					//Relatives
 					try {
-						DefaultTableModel model = Controller.getEmployeeRelatives();
+						DefaultTableModel model = Uppgift3Controller.getEmployeeRelatives();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
@@ -160,7 +160,7 @@ public class Uppgift3_View {
 				case 2:
 					// Sickleave 2004
 					try {
-						DefaultTableModel model = Controller.getSickleave();
+						DefaultTableModel model = Uppgift3Controller.getSickleave();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
@@ -170,7 +170,7 @@ public class Uppgift3_View {
 				case 3:
 					//Most sick
 					try {
-						DefaultTableModel model = Controller.getMostSick();
+						DefaultTableModel model = Uppgift3Controller.getMostSick();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException e) {
 						lblFeedback.setText(errorMessage);
@@ -209,7 +209,7 @@ public class Uppgift3_View {
 				case 0:
 					//Keys
 					try {
-						DefaultTableModel model = Controller.getKeys();
+						DefaultTableModel model = Uppgift3Controller.getKeys();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException ex) {
 						lblFeedback.setText(errorMessage);
@@ -218,7 +218,7 @@ public class Uppgift3_View {
 				case 1:
 					//Indexes
 					try {
-						DefaultTableModel model = Controller.getIndices();
+						DefaultTableModel model = Uppgift3Controller.getIndices();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException ex) {
 						lblFeedback.setText(errorMessage);
@@ -227,7 +227,7 @@ public class Uppgift3_View {
 				case 2:
 					//Table constraints
 					try {
-						DefaultTableModel model = Controller.getConstraints();
+						DefaultTableModel model = Uppgift3Controller.getConstraints();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException ex) {
 						lblFeedback.setText(errorMessage);
@@ -236,7 +236,7 @@ public class Uppgift3_View {
 				case 3:
 					//All tables 1
 					try {
-						DefaultTableModel model = Controller.getTablesOne();
+						DefaultTableModel model = Uppgift3Controller.getTablesOne();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException ex) {
 						lblFeedback.setText(errorMessage);
@@ -245,7 +245,7 @@ public class Uppgift3_View {
 				case 4:
 					//All tables 2
 					try {
-						DefaultTableModel model = Controller.getTablesTwo();
+						DefaultTableModel model = Uppgift3Controller.getTablesTwo();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException ex) {
 						lblFeedback.setText(errorMessage);
@@ -254,7 +254,7 @@ public class Uppgift3_View {
 				case 5:
 					//Columns employee 1
 					try {
-						DefaultTableModel model = Controller.getColumnsOne();
+						DefaultTableModel model = Uppgift3Controller.getColumnsOne();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException ex) {
 						lblFeedback.setText(errorMessage);
@@ -263,7 +263,7 @@ public class Uppgift3_View {
 				case 6:
 					//Columns employee 2
 					try {
-						DefaultTableModel model = Controller.getColumnsTwo();
+						DefaultTableModel model = Uppgift3Controller.getColumnsTwo();
 						tableCronusAccess.setModel(model);
 					} catch (RemoteException ex) {
 						lblFeedback.setText(errorMessage);
@@ -303,7 +303,7 @@ public class Uppgift3_View {
 						String number = textFieldAddUpdateEmployeeNo.getText().trim();
 						String firstName = textFieldFirstName.getText().trim();
 						String lastName = textFieldLastName.getText().trim();
-						int result = Controller.addEmployee(number, firstName, lastName);
+						int result = Uppgift3Controller.addEmployee(number, firstName, lastName);
 						
 						if (result > 0) {
 							lblFeedback.setText("Successfully added employee with number: " + number + ".");
@@ -356,7 +356,7 @@ public class Uppgift3_View {
 						String number = textFieldAddUpdateEmployeeNo.getText().trim();
 						String firstName = textFieldFirstName.getText().trim();
 						String lastName = textFieldLastName.getText().trim();
-						int result = Controller.updateEmployee(number, firstName, lastName);
+						int result = Uppgift3Controller.updateEmployee(number, firstName, lastName);
 						
 						if (result > 0) {
 							lblFeedback.setText("Successfully updated employee with number: " + number + ".");
@@ -422,7 +422,7 @@ public class Uppgift3_View {
 				if (validateDeleteInput()) {
 					try {
 						String number = textFieldDeleteEmployeeNo.getText().trim();
-						int result = Controller.deleteEmployee(number);
+						int result = Uppgift3Controller.deleteEmployee(number);
 						
 						if (result > 0) {
 							lblFeedback.setText("Successfully deleted employee with number: " + number + ".");

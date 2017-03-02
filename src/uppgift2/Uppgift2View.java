@@ -14,7 +14,7 @@ import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.JLabel;
 
-public class Uppgift2_View {
+public class Uppgift2View {
 
 	private JFrame frameMain;
 	private JComboBox<String> comboBoxChooseTable;
@@ -32,7 +32,7 @@ public class Uppgift2_View {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Uppgift2_View window = new Uppgift2_View();
+					Uppgift2View window = new Uppgift2View();
 					window.frameMain.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,7 +44,7 @@ public class Uppgift2_View {
 	/**
 	 * Create the application.
 	 */
-	public Uppgift2_View() {
+	public Uppgift2View() {
 		try{
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Windows".equals(info.getName())) {
@@ -151,7 +151,6 @@ public class Uppgift2_View {
 		btnShowTable.setBounds(229, 15, 115, 29);
 		panelMain.add(btnShowTable);	
 		}
-	
 	private void clearFeedback() {
 		lblFeedback.setText("");
 	}
